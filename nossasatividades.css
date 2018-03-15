@@ -32,28 +32,28 @@ header {
 
 h1 {
    font-size: 40px;
-   color: white;
+   color: #1a1a1a;
 }
 
 h2{
 	font-size: 30px;
-  color: white;
+  color: #1a1a1a;
 }
 
 h3{
 	font-size: 20px;
-  color: white;
+  color: #1a1a1a;
 }
 
-p {color: white;
+p {color: #1a1a1a;
    font-family: verdana;
   font-size: 20px;
 }
 
 body {
-    background-color: black;
+    background-color: #f2f2f2;
 }
 
 address{
-    color: white;
+    color: #1a1a1a;
 }

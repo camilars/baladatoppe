@@ -23,7 +23,7 @@ div{
   position: absolute;
   z-index: -1;
   padding:100px 200px; 
-  border:1px solid gray;
+  
   position: static;
 }
 
@@ -38,17 +38,30 @@ div{
     text-decoration: none;
     opacity: 0.6;
 }
+
+img{
+    width: 1304px;
+    height: 980px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 h1 {
     font-size: 40px;
-    color: white;
+    color: black;
 }
+
 h2{
     font-size: 25px;
-    color: white;
+    color: black;
 }
+
 body {
-    background-color: black;
+    background-color: #f2f2f2;
 }
+
 address{
     color: white;
 }
