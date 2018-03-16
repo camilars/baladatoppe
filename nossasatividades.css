@@ -45,9 +45,10 @@ h3{
   color: #1a1a1a;
 }
 
-p {color: #1a1a1a;
-   font-family: verdana;
-  font-size: 20px;
+p {
+    color: #1a1a1a;
+    font-family: verdana;
+    font-size: 20px;
 }
 
 body {
@@ -55,5 +56,5 @@ body {
 }
 
 address{
-    color: #1a1a1a;
+    color: white;
 }
