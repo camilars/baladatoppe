@@ -1,4 +1,4 @@
-<?php include 'menu.php';?>
+<?php include 'head.php';?>
 <?php include 'header.php'; ?>
   	
   	<h1>Colaboradores</h1>
@@ -9,5 +9,3 @@
 		<h2>Carlos Miguel</h2>
 		<h2>Elaine</h2>
 <?php include 'footer.php' ; ?>
-</body>
-</html>

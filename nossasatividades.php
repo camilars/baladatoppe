@@ -11,6 +11,3 @@
 		<p>Armazenamento e hospedagem de aplicações em nuvem<br>Gestão e administração de banco de dados</p>
 
 <?php include 'footer.php' ; ?>
-	
-</body>
-</html>

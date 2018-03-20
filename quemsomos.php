@@ -13,5 +13,4 @@
 	<h3>Valores</h3>
 		<p>Ética e confiabilidade.<br> Pontualidade no prazo de entrega do projeto.</p>
 <?php include 'footer.php' ; ?>
-</body>
-</html>
+

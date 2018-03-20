@@ -1,5 +1,4 @@
 <header>
-		<address>contato@baladatop.com +55 0800 2330 300</address>
 		<h1>Balada Top</h1>
 
 		<a href="index.php" class="botton">HOME</a>
