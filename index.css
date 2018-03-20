@@ -1,16 +1,7 @@
+@charset 'utf-8';
 
-header.container {
-    width: 100%;
-    border: 1px solid gray;
-    background-color: gray;
-    color: gray;
-    padding: 15px;
-    text-align: center;
-    margin-bottom:0;
-    position: static;
-}
-
-header {
+/* estilizando haeder*/
+footer{
     background-color: gray;
     color: gray;
     padding: 15px;
@@ -23,7 +14,6 @@ div{
   position: absolute;
   z-index: -1;
   padding:100px 200px; 
-  
   position: static;
 }
 
@@ -31,6 +21,7 @@ img{
     background-image: ' img1.jpg';
     background-repeat: no-repeat;
     background-size: 1900px  1300px;
+    background-position: center; 
 
 
 }
@@ -52,6 +43,9 @@ body {
 address{
         color: black;
     }
+
+/*estilizando menu*/
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -69,14 +63,60 @@ address{
     background-color: #ddd;
     color: black;
 }
-footer{
-    background-color: gray;
-    color: gray;
-    padding: 15px;
-    text-align: center;
-    margin-bottom:0;
-    position: static;
+
+/*estilizando colaboradores*/
+
+#colaboradores{
+    color: black;
+
 }
-form{
-    text-align: right;
+
+h2{
+    font-size: 25px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+/*estilizando nossasatividades*/
+
+#nossasatividades {
+  color: #1a1a1a;
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+  font-family: verdana;
+  font-size: 20px;
+}
+
+/*estilizando quem somos*/
+
+#quemsomos {
+  color: black;
+}
+h1{
+   font-size: 40px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+h3{
+  font-size: 20px;
+}
+p{
+  font-family: verdana;
+  font-size: 20px;
 }
