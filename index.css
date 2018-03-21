@@ -1,15 +1,6 @@
 @charset 'utf-8';
 
 /* estilizando haeder*/
-footer{
-    background-color: gray;
-    color: gray;
-    padding: 15px;
-    text-align: center;
-    margin-bottom:0;
-    position: static;
-}
-
 div{
   position: absolute;
   z-index: -1;
@@ -18,65 +9,44 @@ div{
 }
 
 img{
-    background-image: ' img1.jpg';
-    background-repeat: no-repeat;
-    background-size: 1900px  1300px;
-    background-position: center; 
-
+  background-image: ' img1.jpg';
+  background-repeat: no-repeat;
+  background-size: 1900px  1300px;
+  background-position: center; 
 
 }
 
 h1 {
-    font-size: 40px;
-    color: black;
+  font-size: 40px;
+  color: black;
 }
 
 h2{
-    font-size: 25px;
-    color: black;
+  font-size: 25px;
+  color: black;
 }
 
 body {
-        background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 address{
-        color: black;
+   color: black;
     }
-
-/*estilizando menu*/
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    background-size: 19px  13px;
-}
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-}
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 /*estilizando colaboradores*/
 
 #colaboradores{
-    color: black;
+  color: black;
 
 }
 
 h2{
-    font-size: 25px;
+  font-size: 25px;
 }
 
 h1{
-    font-size: 40px;
+  font-size: 40px;
 }
 
 /*estilizando nossasatividades*/
@@ -92,7 +62,7 @@ h2{
 }
 
 h3{
-    font-size: 20px;
+  font-size: 20px;
 }
 
 p{
@@ -106,7 +76,7 @@ p{
   color: black;
 }
 h1{
-   font-size: 40px;
+  font-size: 40px;
 }
 
 h2{

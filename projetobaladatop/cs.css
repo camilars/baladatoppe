@@ -1,0 +1,20 @@
+body{
+	background-image: url('login.jpg');
+	text-align: center;
+}
+
+.b{
+	background-color: #BFEFFF;
+	padding: 1% 2%;
+	font-size: 20px;
+	font-size: 150%;
+	
+
+}
+
+.c{
+	font-size: 20px;
+}
+#form{
+	margin-top: 20%;
+}
