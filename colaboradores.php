@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
   	<div id="colaborares">
-  	<h1>Colaboradores</h1>
+  	<h1>COLABORADORES</h1>
 		<h2>Camila Rodrigues</h2>
 		<h2>Pedro Lucas</h2>
 		<h2>Rafael Herculano</h2>

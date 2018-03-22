@@ -26,4 +26,3 @@
 		<a href="login.php">BALADA TOP</a>
 </div>
 </header>
-
