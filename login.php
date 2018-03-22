@@ -4,8 +4,8 @@
 	<title>login</title>
 </head>
 <body>
-	<form action="formulario.php" method="POST">
-		<input type="text" name="login" placeholder="Login">
+	<form action="do_login.php" method="POST">
+		<input type="text" name="usuario" placeholder="Login">
 		<input type="password" name="senha" placeholder="senha">
 		<input type="submit" value="Enviar">
 	</form>

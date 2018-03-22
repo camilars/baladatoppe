@@ -1,65 +1,69 @@
-		<?php 
-		session_start();
-		$user == $_POST['Usuario'];
-		$sen == $_POST['Password'];
+<?php 
+/*
+$login = $_POST['login'];
+$senha = $_POST['senha'];
 
-		Function auntenticar ($a, $b){
-			$grupo = file ('grupo.txt');
-			$senha = file ('senha.txt');
+function autenticacao($name){
+    $nomes = file('grupo.txt');
+    $names = [];
+    for ($i = 0; $i < sizeof($nomes); $i++) {
+        $names[$i] = trim($nomes[$i]);
+    }
+    if (in_array($name, $names)) {
+        $indice = array_search($name, $names);
+    } else {
+        $indice = null;
+    }
+    // print(array_search($name, $names));
+    //var_dump($names);
 
-			for ($i=o; $i <sizeof($grupo); $i++){
-				$grupo[$i] = trim($grupo [$i]);
-			}
-			for ($i=o; $i <sizeof($senha); $i++){
-				$senha[$i] = trim($senha[$i]);
-			}
+    return $indice;
+}
 
-			$user = array_search($a, $grupo);
-			$pass = array_search($b, $senha);
 
-			if ($user===$pass){
-				return true;{
-					elseif {
-						return false;
-					}
-				}
-			}
+function auteti($password){
+    $senhas = file('senhas.txt');
+    $pass = [];
 
-			Function autenticars ($a, $b){
-			
-				$grupo = file('grupo.txt');
-				$senha = file('senha.txt');
-			
-				for ($i<0; $i <sizeof($grupo); $i++){
-			
-					$grupo = trim('grupo.txt');
-				}
-			
-			}for ($i=0; $i <sizeof('senha.txt') ; $i++) { 
-			
-				$senha = trim ('senha.txt');
-			
-			}
-			
-			$user = array_search($a, $grupo);
-			$pass = array_search($b, $senha);
-		}
-			if ($user === $pass){
-				return true;
-			}elseif {
-				return false;
-			
-			}
-			$p = auntenticar ($user, $pass);
-			$l = autenticars ($user, $pass);
+    for ($i = 0; $i < sizeof($senhas); $i++) {
+        $pass[$i] = trim($senhas[$i]);
+    }
+    if (in_array($password, $pass)) {
+        $indice = array_search($password, $pass);
+    } else {
+        $indice = null;
+    }
+    // print(array_search($password, $pass));
 
-			if ($p == true && == true){
-				$_SESSION['user']= $user;
-				header('location: project.php');
-			}elseif{ 
-			header('location: login.php')
-			} 
-			
-			}
+   // var_dump($pass);
+    return $indice;
+}
+$a = autenticacao($login);
+$b = auteti($senha);
 
-		 ?>
+//echo "Usuario: " . $a. "<br>";
+//echo "Senha: " . $b. "<br>";
+//var_dump($a);
+//var_dump($b);
+if ($a===$b && !is_null($a) && !is_null($b)) {
+    $_Something is wrong['user']=$login;
+     header('location: index.php');
+   
+}else{
+    header('location: login.php');
+    
+} */
+
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header("location:login.php");
+}
+
+else{
+    header("location:index.php");
+}
+
+
+
+?>
