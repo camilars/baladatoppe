@@ -2,7 +2,7 @@
 
 	<div id="quemsomos">
 	<h2>Quem somos</h2>
-		<p>Somos uma empresa inovadora especializada em tecnologia <br>desemvolvendo aplicações práticas e satisfatórias para o cliente.</p>
+		<p>Somos uma empresa inovadora especializada em tecnologia <br>desenvolvendo aplicações práticas e satisfatórias para o cliente.</p>
 	
 	<h3>Missão</h3>
 		<p>Criar novos projetos para facilitar no desempenho empresarial,<br> gerando satisfação e confiança ao cliente alvo.</p>
