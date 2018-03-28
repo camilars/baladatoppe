@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Access Premiun</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Access Premiun</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -32,10 +32,11 @@
       <li class="nav-item">
       <a class="nav-link" href="colaboradores.php">COLABORADORES</a>
       </li>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">PROJETOS</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="projetobaladatop/login.php">Balada Top</a>
-      </div>
+      <li class="dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJETOS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Balada Top</a></li>
+          </ul>
   </nav>
 </header>
