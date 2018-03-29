@@ -36,7 +36,7 @@
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJETOS
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Balada Top</a></li>
+            <li><a href="projetobaladatop/index.php">Balada Top</a></li>
           </ul>
   </nav>
 </header>
