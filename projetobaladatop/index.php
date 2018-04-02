@@ -46,71 +46,55 @@
     </a>
 </div>
 <!-- QUEM SOMOS -->
-
 <div id="quemsomos" class="container text-center">
   <h3>QUEM SOMOS</h3>
   <p><em>Balada Top</em></p>
   <p></p>
   <br>
+  <br>
 </div>
-
 <div id="contato" class="container text-center">
 <h3>CONTATO</h3>
   <br>
   <div class="row text-center">
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <p class="text-center"><strong>Camila Rodrigues</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="imagens/imag2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
+        <img src="imagens/mila.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <div>
         <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
       </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <p class="text-center"><strong>Pedro Lucas</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="imagens/imag3.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
+        <img src="imagens/avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <div>
+        <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
       </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <p class="text-center"><strong>Rafael Herculano</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="imagens/imag1.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
+        <img src="imagens/avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <div>
+        <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
       </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <p class="text-center"><strong>Maria Luiza</strong></p><br>
-      <a href="#demo4" data-toggle="collapse">
-        <img src="imagens/imag2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo4" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+        <img src="imagens/avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <div>
+        <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
       </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <p class="text-center"><strong>Carlos Miguel</strong></p><br>
-      <a href="#demo5" data-toggle="collapse">
-        <img src="imagens/imag2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo5" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+        <img src="imagens/avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <div>
+        <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
       </div>
     </div>
   </div>

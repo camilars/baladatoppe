@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
-  <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script> -->
+  <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 
   <!-- <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,11 +39,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">HOME</a></li>
-        <li><a href="#quemsomos">QUEM SOMOS</a></li>
-        <li><a href="#contato">CONTATO</a></li>
-        <li><a href="#formulario">CADASTRE-SE</a></li>
-        <li><a href="#login">LOGIN</a></li>
+        <li><a href="index.php"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="#quemsomos"><i class="fas fa-users"></i> QUEM SOMOS</a></li>
+        <li><a href="#contato"><i class="fas fa-envelope"></i> CONTATO</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">BALADAS
           <span class="caret"></span></a>
@@ -54,7 +52,9 @@
           </ul>
         </li>
         <!--  tag li para ir no mapa -->
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        <li><a href="#mapa"><i class="fas fa-map-marker-alt"></i></span></a></li>
+        <li><a href="#formulario">CADASTRE-SE</a></li>
+        <li><a href="#login">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
     </div>
   </div>
