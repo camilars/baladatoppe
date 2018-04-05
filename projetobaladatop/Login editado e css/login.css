@@ -1,0 +1,17 @@
+body{
+	background-image: url("abalada.jpg");
+	background-repeat: no-repeat;
+	background-size: 1800px 1100px;
+}
+#nav{
+	height:10px; width:90%;padding:7px;
+}
+#sup_direito{
+	float:right; width:auto; 
+}
+#user, #password{
+	float:left;
+}
+.login{
+	width: 10px;
+}
