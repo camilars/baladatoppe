@@ -13,6 +13,6 @@ if (!is_logged()) {
 
 <button>
 	
-sair  <a href="logout.php"></a> 
+<a href="login.php">Sair</a> 
 </button>
 

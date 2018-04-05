@@ -69,8 +69,8 @@
       <p class="text-center"><strong>Pedro Lucas</strong></p><br>
         <img src="imagens/avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       <div>
-        <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
+        <p><i class="fas fa-envelope"></i> pedrolucastitan@hotmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> 081 98510 3107</p>
       </div>
     </div>
     <div class="col-sm-3">

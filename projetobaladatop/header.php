@@ -54,7 +54,7 @@
         <!--  tag li para ir no mapa -->
         <li><a href="#mapa"><i class="fas fa-map-marker-alt"></i></span></a></li>
         <li><a href="#formulario">CADASTRE-SE</a></li>
-        <li><a href="#login">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="Login editado e css/login.php">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
     </div>
   </div>
