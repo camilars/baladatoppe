@@ -138,3 +138,7 @@ body {
   textarea {
       resize: none;
   }
+  p{
+    font-style: italic;
+    text-align: center;
+  }

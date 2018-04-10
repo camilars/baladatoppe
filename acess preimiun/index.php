@@ -10,7 +10,7 @@
 	<h1>Access Premiun</h1>
     <p>Soluções Tecnologicas</p> 
 </div>
-<img src="imagens/img1.jpg" width="1840px" height="600px">
+<img src="imagem/img1.jpg" width="1840px" height="600px">
 
 <?php include 'footer.php' ; ?>
 

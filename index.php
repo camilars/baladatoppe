@@ -46,11 +46,14 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
-<!-- QUEM SOMOS -->
-<div id="quemsomos" class="container text-center">
+
   <h3></h3>
-  <p><em>O Balada Top é uma aplicação com o objetivo de ajudar os usuários a encontrar as melhores baladas da região metropolitana do Recife.<br>Cadastre-se e receba notificações especiais e promoções.</em></p>
+  <p><em> O Balada Top é uma aplicação com o objetivo de ajudar os usuários a encontrar as melhores baladas da região metropolitana do Recife.<br>Cadastre-se, receba notificações especiais e promoções.</em></p>
   <p></p>
   <br>
   <br>
+</div>
+
+    </div>
+  </div>
 </div>
