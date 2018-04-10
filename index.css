@@ -97,11 +97,11 @@ body {
       letter-spacing: 4px;
       opacity: 0.9;
   }
-  .navbar li a, .navbar .navbar-brand { 
-      color: #d5d5d5 !important;
+  navbar li a, .navbar .navbar-brand { 
+      color: #000000 !important;
   }
   .navbar-nav li a:hover {
-      color: #fff !important;
+      color: #4d4dff !important;
   }
   .navbar-nav li.active a {
       color: #fff !important;

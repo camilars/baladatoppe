@@ -40,16 +40,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="#quemsomos"><i class="fas fa-users"></i> QUEM SOMOS</a></li>
-        <li><a href="#contato"><i class="fas fa-envelope"></i> CONTATO</a></li>
+       
         <li><a href="acess preimiun/index.php">acess premiun</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">BALADAS
-          <span class="caret"></span></a>
+          
+          
           <ul class="dropdown-menu">
-            <li><a href="#">A casa Pub</a></li>
-            <li><a href="#">Texas</a></li>
-            <li><a href="#">Rock & Ribs Loung</a></li> 
+          
           </ul>
         </li>
         <!--  tag li para ir no mapa -->
