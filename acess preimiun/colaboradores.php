@@ -56,8 +56,10 @@
         <img src="imagens/miguel.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       <div>
         <p><i class="fas fa-envelope"></i> carlos.miguel.r@outlook.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 98632 8994</p>
-      </div>
+        <p><i class="fab fa-whatsapp"></i> 081 98632 8994</p> <br>
+      </div><br>
+
+
 
 <?php include 'footer.php' ; ?>
 </body>

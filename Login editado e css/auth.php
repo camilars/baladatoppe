@@ -3,7 +3,7 @@
 include 'init.php';
 
 $user = $_POST['user'];
-$pw = $_POST['pw'];
+$pw = $_POST['password'];
 
 if (login($user, $pw)) {
     redirect('index.php');
