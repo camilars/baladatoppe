@@ -1,103 +1,65 @@
 <?php include 'header.php';?>
+<form>
+<div class="container text-center"><!-- formlário cadastro -->
 
-<div><!-- formlário cadastro -->
-<div class="form-row mt-4">
-    <div class="col-sm-5 pb-3">
-        <label for="exampleAccount">Nome</label>
-        <input type="text" action="" class="form-control" id="exampleAccount" placeholder="nome">
+    <div class="form-row mt-4">
+        <div class="col-sm-5 pb-3">
+            <label for="exampleAccount">Nome</label>
+            <input type="text" action="" name="usuario" class="form-control" id="exampleAccount" placeholder="nome">
+        </div>
     </div>
     <div class="col-sm-3 pb-3">
         <label for="exampleCtrl"><i class="fas fa-at"></i>Email</label>
-        <input type="email" action="" class="form-control" id="exampleCtrl" placeholder="email">
-    </div>
-    <div class="col-sm-4 pb-3">
-        <label for="exampleAmount">Amount</label>
-        <div class="input-group">
-            <div class="input-group-prepend"><span class="input-group-text">$</span></div>
-            <input type="text" class="form-control" id="exampleAmount" placeholder="Amount">
-        </div>
+        <input type="email" action="" name="email" class="form-control" id="exampleCtrl" placeholder="email">
     </div>
     <div class="col-sm-6 pb-3">
-        <label for="exampleFirst">First Name</label>
-        <input type="text" class="form-control" id="exampleFirst">
-    </div>
-    <div class="col-sm-6 pb-3">
-        <label for="exampleLast">Last Name</label>
-        <input type="text" class="form-control" id="exampleLast">
-    </div>
-    <div class="col-sm-6 pb-3">
-        <label for="exampleCity">City</label>
-        <input type="text" class="form-control" id="exampleCity">
+        <label for="exampleCity">Cidade</label>
+        <input type="text" name="cidade" class="form-control" id="exampleCity">
     </div>
     <div class="col-sm-3 pb-3">
-        <label for="exampleSt">State</label>
-        <select class="form-control" id="exampleSt">
-            <option>Pick a state</option>
+        <label for="exampleSt">Estado</label>
+        <select name="estado" class="form-control" id="exampleSt">
+            <option>selecionar</option>
+            <option>Acre-AC</option>
+            <option>Alagoas-AL</option>
+            <option>Amapá-AP</option>
+            <option>Amazonas-AM</option>
+            <option>Bahia-BA</option>
+            <option>Ceará-CE</option>
+            <option>Distrito Federal-DF</option>
+            <option>Espírito Santo-ES</option>
+            <option>Goiás-GO</option>
+            <option>Maranhão-MA</option>
+            <option>Mato Grosso-MT</option>
+            <option>Mato Grosso do Sul-MS</option>
+            <option>Minas Gerais-MG</option>
+            <option>Pará-PA</option>
+            <option>Paraíba-PB</option>
+            <option>Paraná-PR</option>
+            <option>Pernambuco-PE</option>
+            <option>Piauí-PI</option>
+            <option>Rio de Janeiro-RJ</option>
+            <option>Rio Grande do Norte-RN</option>
+            <option>Rio Grande do Sul-RS</option>
+            <option>Rondônia-RO</option>
+            <option>Roraima-RR</option>
+            <option>Santa Catarina-SC</option>
+            <option>São Paulo-SP</option>
+            <option>Sergipe-SE</option>
+            <option>Tocantins-TO</option>
         </select>
     </div>
     <div class="col-sm-3 pb-3">
-        <label for="exampleZip">Postal Code</label>
-        <input type="text" class="form-control" id="exampleZip">
+        <label for="exampleAccount">CEP</label>
+        <input type="text" name="cep" maxlength="9" onkeypress="formatar('#####-###', this)" class="form-control" id="exampleAccount" placeholder="CEP" >
     </div>
-    <div class="col-md-6 pb-3">
-        <label for="exampleAccount">Color</label>
-        <div class="form-group small">
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Blue
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Red
-                </label>
-            </div>
-            <div class="form-check form-check-inline disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled=""> Green
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option4"> Yellow
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option5"> Black
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option6"> Orange
-                </label>
-            </div>
-        </div>
+    <div class="col-sm-3 pb-3">
+        <label for="exampleAccount">Senha</label>
+        <input type="password" name="senha" class="form-control" id="exampleAccount">
     </div>
-    <div class="col-md-6 pb-3">
-        <label for="exampleMessage">Message</label>
-        <textarea class="form-control" id="exampleMessage"></textarea>
-        <small class="text-info">
-            Add the packaging note here.
-        </small>
+    <div class="col-sm-3 pb-3">
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
-    <div class="col-12">
-        <div class="form-row">
-            <label class="col-md col-form-label"  for="name">Generated Id</label>
-            <input type="text" class="form-control col-md-4" name="gid" id="gid" />
-            <label class="col-md col-form-label"  for="name">Date Assigned</label>
-            <input type="text" class="form-control col-md-4" name="da" id="da" />
-        </div>
     </div>
-</div>
-
-</div>
-
-</div>
-<!--/row-->
-
-<br><br><br><br>
-
-</div>
-<!--/col-->
-</div>
+  
+</form>
