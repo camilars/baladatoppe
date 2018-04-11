@@ -52,7 +52,7 @@
         <!--  tag li para ir no mapa -->
         <li><a href="mapa.php"><i class="fas fa-map-marker-alt"></i></span></a></li>
         <li><a href="form_cadastro.php">CADASTRE-SE</a></li>
-        <li><a href="Login editado e css/login.php">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="../Login editado e css/login.php">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
     </div>
   </div>
