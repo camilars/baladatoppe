@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 
-<form>
+<form action="add_usuario.php" method="POST">
     <link rel="stylesheet" type="text/css" href="cadastro.css">
 <div class="container text-center"><!-- formlário cadastro -->
     <div class="form-row mt-4">
