@@ -1,18 +1,15 @@
-<?php 
-
-session_start();
-
+<?php
+ include 'init_do_cadastro.php';
 $usuario = $_POST['usuario'];
-$email = $_POST['email'];
-$estado = $_POST['estado'];
 $senha = $_POST['senha'];
+$usuarios = $usuario."-".$senha;
 
-$file = fopen('usuarios.txt', 'a+');
+$date = file('Login editado e css/users-passwords.txt' );
+$date [] = $usuarios."\n";
+$date_str = implode('',$date);
 
-$dado = $usuario."/".$email."/".$estado."/".$senha."\n";
+file_put_contents('/Login editado e css/users-passwords.txt', $date_str);
 
-fwrite($file, $dado);
-fclose($file);
-header('Location:index.php');
-
+echo "Cadastro feito com Sucesso, Seja bem vindo";
 ?>
+ .<a href="/Login editado e css/login.php">Acessar</a>
