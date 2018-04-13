@@ -7,9 +7,9 @@ $email = $_POST['email'];
 $estado = $_POST['estado'];
 $senha = $_POST['senha'];
 
-$file = fopen('usuarios.txt', 'a+')
+$file = fopen('usuarios.txt', 'a+');
 
-$dado = $usuario."-".$email."-".$estado."-".$senha."\n";
+$dado = $usuario."/".$email."/".$estado."/".$senha."\n";
 
 fwrite($file, $dado);
 fclose($file);
