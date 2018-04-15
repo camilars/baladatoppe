@@ -1,6 +1,6 @@
 <?php
 
-include 'init.php';
+include 'init-login.php';
 
 if (!is_logged()) {
     redirect('login.php');
