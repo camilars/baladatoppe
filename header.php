@@ -41,7 +41,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php"><i class="fas fa-home"></i> HOME</a></li>
        
-        <li><a href="acess preimiun/index.php">acess premiun</a></li>
+        
         <li class="dropdown">
           
           
@@ -50,7 +50,7 @@
           </ul>
         </li>
         <!--  tag li para ir no mapa -->
-        <li><a href="mapa.php"><i class="fas fa-map-marker-alt"></i></span></a></li>
+        <li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
         <li><a href="form_cadastro.php">CADASTRE-SE</a></li>
         <li><a href="login.php">LOGIN <i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
