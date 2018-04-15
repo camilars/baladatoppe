@@ -3,7 +3,7 @@
 session_start();
 
 function login($user, $pw) {
-    $logins = file('users-passwords.txt');
+    $logins = file('usuarios.txt');
     for ($i = 0; $i < sizeof($logins); $i++) {
         $logins[$i] = trim($logins[$i]);
     }
