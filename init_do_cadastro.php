@@ -2,7 +2,7 @@
 session_start();
 function login($usuario,$senha){
 	$usuario_logado = $usuario ."-". $senha;
-	$usuario = file('Login editado e css/users-passwords.txt');
+	$usuario = file('usuarios.txt');
 	for ($i=0; $i < sizeof($usuario); $i++) {
 	 $usuario[$i] = trim($usuario[$i]);
 	}
