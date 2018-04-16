@@ -104,6 +104,7 @@
 
 
 	 <input id="buscar" type="text" name="buscar">
+   <input type="submit" value="Procurar">
 
     <div id="map"></div>
       <!-- <div class="header"> -->
