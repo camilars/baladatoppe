@@ -29,7 +29,7 @@
       #map {
         height: 80%;
         width: 50%;
-        /*margin-top:320px ;*/
+        margin-top:100px ;
        
       }
       .header{
@@ -200,8 +200,6 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
     async defer></script>
-  
-
 
   </body>
 

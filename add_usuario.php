@@ -10,6 +10,7 @@ $date_str = implode('',$date);
 
 file_put_contents('usuarios.txt', $date_str);
 
-echo "Cadastro feito com Sucesso, Seja bem vindo";
+
+//echo "Cadastro feito com Sucesso, Seja bem vindo";
+header('location:login.php');
 ?>
- .<a href="login.php">Acessar</a>

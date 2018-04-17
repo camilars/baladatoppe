@@ -20,7 +20,7 @@
     <div class="form-row mt-4">
         <div class="col-sm-5 pb-3">
             <label for="exampleCtrl"><i class="fas fa-at"></i>Email</label>
-            <input type="email" action="" name="email" class="form-control" id="exampleCtrl" placeholder="exjubileu@gmail.com" required>
+            <input type="email" action="" name="email" class="form-control" id="exampleCtrl" placeholder="exjoao123@gmail.com" required>
         </div>
     </div>
         <div class="form-row mt-4">
