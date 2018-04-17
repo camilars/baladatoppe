@@ -25,6 +25,41 @@
   <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
   <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script> -->
+  <style>
+      #map {
+        height: 80%;
+        width: 50%;
+        /*margin-top:320px ;*/
+       
+      }
+      .header{
+        font-size: 40px;
+        padding: 2px 2px;
+        text-align: center;
+        background-color: grey;
+        color:#000000;
+
+      }
+      html, body {
+        height: 100%;
+        /*margin: 0;*/
+        /*padding: 0;*/
+        width:100%;
+      }
+
+      body{
+        background:url('abalada.jpg') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      #buscar{
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+
+  </style>
+
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -55,7 +90,7 @@
  
         Bem Vindo, <?php echo $_SESSION['user-logged'];?>
 <button>
-	
+  
 <a href="login.php">Sair</a> 
 </button>
         
@@ -67,45 +102,13 @@
 
 
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Styled Maps - Night Mode</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      #map {
-        height: 650px;
-        width: 50%;
-        margin-top:320px ;
-       
-      }
-      .header{
-        font-size: 40px;
-        padding: 2px 2px;
-        text-align: center;
-        background-color: grey;
-        color:#000000;
 
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      body{
-        background:url(abalada.jpg) no-repeat;
-      }
-
-    </style>
-  </head>
-  <body>
+	 <input id="buscar" type="text" name="buscar">
 
     <div id="map"></div>
-      <div class="header"  >
+      <!-- <div class="header"> -->
      
-    </div>
+    <!-- </div> -->
 
     <script>
       function initMap() {
@@ -197,18 +200,9 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
     async defer></script>
+  
+
+
   </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<input type="text" name="buscar">
-	
-</body>
-</html>
 
-
+</html>
