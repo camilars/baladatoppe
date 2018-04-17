@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,12 @@
         <!--  tag li para ir no mapa -->
         <li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
  
-        <?php echo "Bem vindo" . $_SESSION['user-logged']; ?>
+        Bem Vindo, <?php echo $_SESSION['user-logged'];?>
+<button>
+	
+<a href="login.php">Sair</a> 
+</button>
+        
       </ul>
     </div>
   </div>
@@ -61,10 +67,6 @@
 
 
 
-<button>
-	
-<a href="login.php">Sair</a> 
-</button>
 <!DOCTYPE html>
 <html>
   <head>
@@ -91,9 +93,15 @@
         margin: 0;
         padding: 0;
       }
+
+      body{
+        background:url(abalada.jpg) no-repeat;
+      }
+
     </style>
   </head>
   <body>
+
     <div id="map"></div>
       <div class="header"  >
      

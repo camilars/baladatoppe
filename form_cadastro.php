@@ -6,21 +6,21 @@
     <div class="form-row mt-4">
         <div class="col-sm-5 pb-3">
             <label for="exampleAccount">Nome</label>
-            <input type="text" action="" name="usuario" class="form-control" id="exampleAccount" placeholder="nome">
+            <input type="text" action="" name="usuario" class="form-control" id="exampleAccount" placeholder="nome" required>
         </div>
     </div>
 
     <div class="form-row mt-4">
         <div class="col-sm-5 pb-3">
             <label for="exampleAccount">Senha</label>
-            <input type="password" name="senha" class="form-control" id="exampleAccount" placeholder="Password">
+            <input type="password" name="senha" class="form-control" id="exampleAccount" placeholder="Password" required>
         </div>
     </div>
 
     <div class="form-row mt-4">
         <div class="col-sm-5 pb-3">
             <label for="exampleCtrl"><i class="fas fa-at"></i>Email</label>
-            <input type="email" action="" name="email" class="form-control" id="exampleCtrl" placeholder="exjubileu@gmail.com">
+            <input type="email" action="" name="email" class="form-control" id="exampleCtrl" placeholder="exjubileu@gmail.com" required>
         </div>
     </div>
         <div class="form-row mt-4">
