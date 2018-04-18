@@ -142,3 +142,6 @@ body {
     font-style: italic;
     text-align: center;
   }
+  .nav-item li a{
+    color: #000000 !important;
+  }
