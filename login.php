@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<?php include "header.php";?> 
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
-</head>
-<body>
+<?php include 'header.php';?> 
+<?php include 'menu.php';?>
+
+<link rel="stylesheet" type="text/css" href="login.css">
 	<div class="Cadastro">
 		<form method="POST" action="auth-do-login.php">
 
@@ -16,5 +11,4 @@
 		</form>
 	</div>
 </div>
-</body>
-</html>
+<?php include 'footer.php';?>

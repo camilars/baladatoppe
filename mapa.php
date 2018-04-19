@@ -27,11 +27,13 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
-      <div class="header"  >
-      <?php include 'header.php' ?>
-    </div>
+  <?php include 'header.php';?>
+  <?php include 'menu.php';?>
 
+    <div id="map"></div>
+      <div class="header">
+    </div>
+<?php include 'footer.php'; ?>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {

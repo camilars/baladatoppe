@@ -1,4 +1,5 @@
 <?php include 'header.php';?>
+<?php include 'menu.php';?>
 
 <div id="carousel" class="carousel slide" data-ride="carousel">
     <!-- indicação-->
@@ -20,14 +21,14 @@
       </div>
 
       <div class="carousel-item">
-       <img src="imagens/rock&ribs.jpg" width="1200" height="700">
+       <img src="imagens/rock&ribs.jpg" width="1100" height="500">
         <div class="carousel-caption">
           <h3>Rock & Ribs Lounge Recife</h3>
         </div>      
       </div>
     
       <div class="carousel-item">
-        <img src="imagens/imag2.jpg" width="1200" height="700">
+        <img src="imagens/imag2.jpg" width="1100" height="500">
         <div class="carousel-caption">
           <h3>Nome do local da balada</h3>
           <p>descrição...........................</p>

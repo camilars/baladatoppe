@@ -1,10 +1,10 @@
 body{
 	background-image: url('abalada.img');
 	background-repeat: no-repeat;
-background-size: 100%
-}
+	background-size: 100%
+	}
+
 .button{
 	margin-left: 30px;
 	margin-top: -50px;
-
-}
+	}

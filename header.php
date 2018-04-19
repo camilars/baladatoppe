@@ -16,7 +16,7 @@
   <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-faded">
    <a class="navbar-brand" href="index.php">Balada Top</a>
   </div>
     <div class="collapse navbar-collapse justify-content-end" id="nav-content">
@@ -28,4 +28,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
