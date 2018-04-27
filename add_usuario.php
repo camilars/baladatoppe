@@ -1,14 +1,14 @@
 <?php
- include 'init_do_cadastro.php';
+ 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
-$usuarios = $usuario."-".$senha;
+$usuarios = $usuario.",".$senha;
 
-$date = file('usuarios.txt' );
+$date = file('usuarios.csv' );
 $date [] = $usuarios."\n";
 $date_str = implode('',$date);
 
-file_put_contents('usuarios.txt', $date_str);
+file_put_contents('usuarios.csv', $date_str);
 
 
 //echo "Cadastro feito com Sucesso, Seja bem vindo";

@@ -2,7 +2,7 @@
 session_start();
 function login($usuario,$senha){
 	$usuario_logado = $usuario ."-". $senha;
-	$usuario = file('usuarios.txt');
+	$usuario = file('usuarios.csv');
 	for ($i=0; $i < sizeof($usuario); $i++) {
 	 $usuario[$i] = trim($usuario[$i]);
 	}

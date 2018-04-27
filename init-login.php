@@ -3,11 +3,11 @@
 session_start();
 
 function login($user, $pw) {
-    $logins = file('usuarios.txt');
+    $logins = file('usuarios.csv');
     for ($i = 0; $i < sizeof($logins); $i++) {
         $logins[$i] = trim($logins[$i]);
     }
-    $user_pw = $user . '-' . $pw;
+    $user_pw = $user . ',' . $pw;
     if (in_array($user_pw, $logins)) {
         $_SESSION['user-logged'] =  $user;
         return true;
