@@ -121,6 +121,15 @@
 
 	<div id="map"></div>
 
+	<?php if ($_GET['barb']): ?>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	<?php endif ?>
+
 	<script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5M9l0N2Ag&callback=initMap">
 </script>
@@ -206,9 +215,9 @@ if(isset($_GET['estado'])){
   <title></title>
 </head>
 <body>
-<div id="comment-container">
-	<h1>Comentarios da balada </h1>
-<div id="comments" style="width: inherit; height: 150px; overflow-y: scroll;">	
+<div id="comment-container"  style ="display: block;">
+	<h1 style="background-color: #264899;color: white">Comentários da balada </h1>
+<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll;">	
 	<?php
 	$a=file('comentarios.txt');	
 	implode("\n", $a);
