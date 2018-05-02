@@ -62,7 +62,17 @@
   	margin-top: 60px;
   	margin-bottom: 10px;
   }
-
+  #comment-container {
+	max-height: 230px;
+	position: absolute;
+	left:1300px;
+	top:160px;
+	background-color:white;
+  }
+  #comments {
+  	left:1300px;
+	top:160px;
+  }
 </style>
 
 </head>
@@ -92,7 +102,7 @@
 
 					<button style=" font-size: 14px !important;text-decoration: none; margin-top: 15px;">
 
-						<a href="login.php">Sair</a> 
+						<a href="logout.php">Sair</a> 
 					</button>
 
 				</ul>
@@ -196,12 +206,22 @@ if(isset($_GET['estado'])){
   <title></title>
 </head>
 <body>
-<h1  style="height: 200px; position: absolute; left:1300px; top:160px;">Comentarios da balada </h1>
-<form method="POST" action="comentarios.php">
+<div id="comment-container">
+	<h1>Comentarios da balada </h1>
+<div id="comments" style="width: inherit; height: 150px; overflow-y: scroll;">	
+	<?php
+	$a=file('comentarios.txt');	
+	implode("\n", $a);
+	for ($i=0; $i < sizeof($a); $i++): ?>
+	<li><?= $a[$i]?>
+	<?php endfor?>
+</div>
+</div>
+<form method="POST" action="coment.php">
 <form>
-  <input type="text" size="70" name="text"  placeholder="comentarios " style="height: 200px; position: absolute; left:1200px; top:220px;  background-color: transparent;" required="e preciso adicinar comentarios para enviar.">
-  <input type="text"  size="70" name="text" placeholder="comentarios..." style=" position: absolute; left:1199px; top:450px;"  required="e preciso adicinar comentarios para enviar.">
+  <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1100px; top:450px; width: 600px; background-color: transparent;" required="e preciso adicinar comentarios para enviar.">
   <input type="submit" value="Enviar" style="position: absolute; left:1770px; top:450px;"">
+
 </form>
 <style>
 #comentarios::-webkit-input-placeholder{
@@ -325,5 +345,4 @@ if(isset($_GET['estado'])){
 <div>
 	
 </div>
-
 <?php include "rodape.php";?>
