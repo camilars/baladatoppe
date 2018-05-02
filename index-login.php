@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+            <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +153,7 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Editar conta</a>
-  <a href="#">Cadastrar balada</a>
+  <a href="musica.php">Playlist</a>
   <a href="logout.php">Sair</a>
 </div>
 
@@ -188,11 +188,11 @@ function closeNav() {
 	<div id="map"></div>
 
 	<?php if ($_GET['barb']): ?>
+		<?php  ?>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<?php foreach ($variable as $key => $value): ?>
+				<li><?= $value ?></li>
+			<?php endforeach ?>
 		</ul>
 	<?php endif ?>
 
@@ -288,12 +288,11 @@ if(isset($_GET['estado'])){
 	$a=file('comentarios.txt');	
 	implode("\n", $a);
 	for ($i=0; $i < sizeof($a); $i++): ?>
-	<li><?= $a[$i]?>
+	<li><?= $a[$i] ?><a href="delete.php?id=<?= $i ?>"> X </a></li>
 	<?php endfor?>
 </div>
 </div>
 <form method="POST" action="coment.php">
-<form>
   <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1100px; top:450px; width: 600px; background-color: transparent;" required="e preciso adicinar comentarios para enviar.">
   <input type="submit" value="Enviar" style="position: absolute; left:1770px; top:450px;"">
 
