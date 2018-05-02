@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+            <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +153,7 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Editar conta</a>
-  <a href="#">Cadastrar balada</a>
+  <a href="musica.php">Playlist</a>
   <a href="logout.php">Sair</a>
 </div>
 
@@ -188,11 +188,11 @@ function closeNav() {
 	<div id="map"></div>
 
 	<?php if ($_GET['barb']): ?>
+		<?php  ?>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<?php foreach ($variable as $key => $value): ?>
+				<li><?= $value ?></li>
+			<?php endforeach ?>
 		</ul>
 	<?php endif ?>
 
