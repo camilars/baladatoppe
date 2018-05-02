@@ -106,6 +106,7 @@
 
 
 
+
 	<input id="buscar" type="text" name="buscar" placeholder="Buscar">
 
 	<div id="map"></div>
@@ -139,6 +140,9 @@
 					<li><a href="index-login.php?barb=Villarena Country Pub">Villarena Country Pub</a></li>
 				</ul>
 			</div>
+
+
+
 <!-- </div> 
   <div  style="position: absolute; left:1000px; top:75px;" >
   <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=UK" /><button>UK</button></p>
@@ -186,7 +190,31 @@ if(isset($_GET['estado'])){
 
 <!-- <div class="header"> -->
 
-	<!-- </div> -->
+	<!-- </di5> -->	<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h1  style="height: 200px; position: absolute; left:1300px; top:160px;">Comentarios da balada </h1>
+<form method="POST" action="comentarios.php">
+<form>
+  <input type="text" size="70" name="text"  placeholder="comentarios " style="height: 200px; position: absolute; left:1200px; top:220px;  background-color: transparent;" required="e preciso adicinar comentarios para enviar.">
+  <input type="text"  size="70" name="text" placeholder="comentarios..." style=" position: absolute; left:1199px; top:450px;"  required="e preciso adicinar comentarios para enviar.">
+  <input type="submit" value="Enviar" style="position: absolute; left:1770px; top:450px;"">
+</form>
+<style>
+#comentarios::-webkit-input-placeholder{
+    color:#C4C;
+    background-color: #4C4;
+    text-transform: uppercase;
+    font-style: bold;
+</style>
+</body>
+</html> 
+
+
+
 
 	<script>
 		function initMap() {
@@ -275,11 +303,13 @@ if(isset($_GET['estado'])){
 				]
 			});
 		}
+
 	</script>
 	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 	async defer></script>
 
 </body>
+
 <h2 style= "position: absolute;top: 50px; left: 1400px; text-shadow:1px 1px 0 #444" >Music Play</h2>
 <audio controls autoplay id="audio" style="position: absolute; left:1400px; top:120px;">
   <source " src="Jamiroquai - Superfresh Oliver Heldens Remix [thezippyaudio1.com].mp3" loop="1" width="200" height="50" type="audio/ogg" >
@@ -290,5 +320,10 @@ if(isset($_GET['estado'])){
 	var audio = document.getElementById('audio');
 	audio.volume = 0.5;
 </script>
+
 </html>
+<div>
+	
+</div>
+
 <?php include "rodape.php";?>
