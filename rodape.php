@@ -20,15 +20,18 @@
           </div>
           <a href=""></a>
           <div class="col-md-1">
-            <i class="fab fa-facebook-square fa-3x"></i>
+            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
           </div>
           
           <div class="col-md-1">
-            <i class="fab fa-instagram fa-3x"></i>
+            <a href=""><i class="fab fa-instagram fa-3x"></i></a>
           </div>
           
           <div class="col-md-1">
             <i class="fab fa-twitter fa-3x"></i>
+          </div>
+          <div class="col-md-1">
+            <a href="https://github.com/camilars/baladatoppe" target="_blank"><i class="fab fa-github fa-3x"></i></a>
           </div>
         </div>
     </div>

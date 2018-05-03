@@ -1,30 +1,19 @@
             <?php session_start(); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Balada Top </title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
-	<script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
-
-  <!-- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
-  <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script> -->
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+            	<title>Balada Top </title>
+            	<meta charset="utf-8">
+            	<link rel="stylesheet" type="text/css" href="index.css">
+            	<meta name="viewport" content="width=device-width, initial-scale=1">
+            	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+            	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+            	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+            	<script src='js/jquery-3.3.1.min.js'></script>
+            	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            	<script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
+            	<script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
   <style>
   #map {
   	height: 50%;
@@ -63,15 +52,15 @@
   	margin-bottom: 10px;
   }
   #comment-container {
-	max-height: 230px;
-	position: absolute;
-	left:1300px;
-	top:160px;
-	background-color:white;
+  	max-height: 230px;
+  	position: absolute;
+  	left:1300px;
+  	top:160px;
+  	background-color:white;
   }
   #comments {
   	left:1300px;
-	top:160px;
+  	top:160px;
   }
 </style>
 
@@ -95,384 +84,368 @@
 					<li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
 
 
-					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:gray; "><i class="fas fa-user"></i><?php echo "&nbsp;".$_SESSION['user-logged'];?> </li> 
+					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:blue;"><i class="fas fa-user"></i><?php  echo "&nbsp;".$_SESSION['user-logged'];?> </li> 
 
 
 					<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font-family: "Lato", sans-serif;
-}
+					<html>
+					<head>
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+						<style>
+						body {
+							font-family: "Lato", sans-serif;
+						}
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
+						.sidenav {
+							height: 100%;
+							width: 0;
+							position: fixed;
+							z-index: 1;
+							top: 0;
+							right: 0;
+							background-color: #111;
+							overflow-x: hidden;
+							transition: 0.5s;
+							padding-top: 60px;
+						}
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+						.sidenav a {
+							padding: 8px 8px 8px 32px;
+							text-decoration: none;
+							font-size: 25px;
+							color: #818181;
+							display: block;
+							transition: 0.3s;
+						}
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+						.sidenav a:hover {
+							color: #f1f1f1;
+						}
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+						.sidenav .closebtn {
+							position: absolute;
+							top: 0;
+							right: 25px;
+							font-size: 36px;
+							margin-left: 50px;
+						}
+						
+						@media screen and (max-height: 450px) {
+							.sidenav {padding-top: 15px;}
+							.sidenav a {font-size: 18px;}
+						}
+					</style>
+				</head><link rel="stylesheet" type="text/css" href="cssteste.css">
+				<body>
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head><link rel="stylesheet" type="text/css" href="cssteste.css">
-<body>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+					<div id="mySidenav" class="sidenav">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<a href="#">Editar conta</a>
+						<a href="musica.php">Playlist</a>
+						<a href="logout.php">Sair</a>
+					</div>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Editar conta</a>
-  <a href="musica.php">Playlist</a>
-  <a href="logout.php">Sair</a>
-</div>
+					<script>
+						function openNav() {
+							document.getElementById("mySidenav").style.width = "250px";
+						}
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
+						function closeNav() {
+							document.getElementById("mySidenav").style.width = "0";
+						}
+					</script>
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-     
-</body>
-</html> 
+				</body>
+				</html> 
 
 
-				</ul>
-			</div>
+			</ul>
 		</div>
-	</nav>
+	</div>
+</nav>
 
+<input id="buscar" type="text" name="buscar" placeholder="Buscar">
 
+<div id="map"></div>
 
-
-
-
-
-
-	<input id="buscar" type="text" name="buscar" placeholder="Buscar">
-
-	<div id="map"></div>
-
-	<?php if ($_GET['barb']): ?>
-		<?php  ?>
-		<ul>
-			<?php foreach ($variable as $key => $value): ?>
-				<li><?= $value ?></li>
-			<?php endforeach ?>
-		</ul>
-	<?php endif ?>
-
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5M9l0N2Ag&callback=initMap">
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5M9l0N2Ag&callback=initMap">
 </script>
+
+<?php if ($_GET['barb']): ?>
+	<?php  ?>
+	<ul>
+		<?php foreach ($variable as $key => $value): ?>
+			<li><?= $value ?></li>
+		<?php endforeach ?>
+	</ul>
+<?php endif ?>
+
 
 <div id="rolamento">
 
-	<h1></h1>
+	
 	<label> <div class="w3-container w3-white">
 		<h2 style=" position: absolute;top: 50px; left: 1000px; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
 
-
 		<td>
-
-
-
-
 
 		</div>
 		<div class="dropdown" style="position: absolute; left:1000px; top:120px;">
 			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">selecionar
 				<span class="caret"></span></button>
 				<ul class="dropdown-menu">
+
 					<li><a href="index-login.php?barb=UK">UK</a></li>
-					<li><a href="index-login.php?barb=Manny Deck">Manny Deck</a></li>
+					<li><a href="index-login.php?barb=MannyDeck">Manny Deck</a></li>
 					<li><a href="index-login.php?barb=Winner">Winner</a></li>
 					<li><a href="index-login.php?barb=Liverpool">Liverpool</a></li>
-					<li><a href="index-login.php?barb=Villarena Country Pub">Villarena Country Pub</a></li>
+					<li><a href="index-login.php?barb=NOX">NOX</a></li>
 				</ul>
 			</div>
 
-
-
-<!-- </div> 
-  <div  style="position: absolute; left:1000px; top:75px;" >
-  <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=UK" /><button>UK</button></p>
-  <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=Manny Deck" /><button>Manny Deck</button></p>
-  <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=Winner" /><button>Winner</button></p>
-  <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=Liverpool" /><button>Liverpool</button></p>
-  <p style="position: relative;top: 50px; display:block;"> <a href="index-login.php?barb=Villarena Country Pub" /><button>Villarena Country Pub</button></p></div>
-</td> -->
-
+		</div>
+	</label> 
 </div>
-</label> 
+<div style="background-color: white; width: 40%;height: 13%;">
+	
+	<?php
+	if(isset($_GET['barb'])){
+		$state = $_GET['barb'];
+
+		$h = file($state . ".csv");
+
+		$i = empty($h);
+		foreach ($h as $value) {
+			if ($value == end($h)) {
+				echo '<a href=' . $value . ' target="_blank">' . $value . '</a>';
+			}
+			else{
+				echo $value.'<br>';
+			}
+		}
+
+		if($i){
+			echo "<h3>Pub não encontrado</h3>";
+		}
+
+	}
+	?>
+	
 </div>
-<?php
-if(isset($_GET['estado'])){
-	$state = $_GET['estado'];
 
-	$h = fopen("baladas.csv","r");
-	$i = fgetcsv($h, null, ",");
-	foreach ($i as $indice => $valor) {
-		echo var_dump($i);
-	}
-
-	if($r==0){
-		echo "<h3>Nenhum pubs encontrada nesse estado!</h3>";
-	}
-	while ($i = file('baladas.csv')) {
-
-        # code...
-	}
-      // while($registro = file('baladas.csv')){
-      //   $pubs = $registro['USER_pub'];
-      //   $cidade = $registro['USER_CIDADE'];
-      //   $telefone = $registro['USER_TELEFONE'];
-      //   $endereco = $registro['USER_LOGRADOURO'];
-      //   $perfil = $registro['USER_PERFIL'];
-      //   echo "<p class='detalhes'><b>pub :</b> <a href='perfil.php?id=$perfil'>". $pubs."</p></a>";
-      //   echo "<p class='detalhes'><b>Cidade :</b>". $cidade."</p>";
-      //   echo "<p class='detalhes'><b>Logradouro :</b>". ucwords($endereco)."</p>";
-      //   echo "<p class='detalhes'><b>Telefone :</b>". $telefone."</p>";
-      //   echo "<hr>";
-      // }
-}
-?>  
-
-
-<!-- <div class="header"> -->
-
-	<!-- </di5> -->	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+	<title></title>
+	<style type="text/css">
+	li{
+		color: black;
+	}
+</style>
 </head>
 <body>
-<div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
-	<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
-<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
-	<?php
-	$a=file('comentarios.txt');	
-	implode("\n", $a);
-	for ($i=0; $i < sizeof($a); $i++): ?>
-	<li><?= $a[$i] ?><a href="delete.php?id=<?= $i ?>"> X </a></li>
-	<?php endfor?>
-</div>
+	<div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
+		<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
+		<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
+			<?php
+			$a=file('comentarios.txt');	
+			implode("\n", $a);
+			for ($i=0; $i < sizeof($a); $i++): ?>
+			<li ><?=  $a[$i] ?><a href="delete.php?id=<?= $i ?>"> X </a></li>
+		<?php endfor?>
+	</div>
 </div>
 <form method="POST" action="coment.php">
-  <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
-  <input type="submit" value="Enviar" style="position: absolute; left:1800px; top:415px;"">
+	<input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
+	<input type="submit" value="Enviar" style="position: absolute; left:1800px; top:415px;"">
 
 </form>
 <style>
 #comentarios::-webkit-input-placeholder{
-    color:#C4C;
-    background-color: #4C4;
-    text-transform: uppercase;
-    font-style: bold;
+	color:#C4C;
+	background-color: #4C4;
+	text-transform: uppercase;
+	font-style: bold;
 </style>
 </body>
 </html> 
 
+<script>
 
-
-
-	<script>
-
-		function initMap() {
-			var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -8.0475622, lng: -34.8769643},
-				zoom: 12,
-				styles: [
-				{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-				{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-				{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-				{
-					featureType: 'administrative.locality',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'poi',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'poi.park',
-					elementType: 'geometry',
-					stylers: [{color: '#263c3f'}]
-				},
-				{
-					featureType: 'poi.park',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#6b9a76'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'geometry',
-					stylers: [{color: '#38414e'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'geometry.stroke',
-					stylers: [{color: '#212a37'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#9ca5b3'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry',
-					stylers: [{color: '#746855'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry.stroke',
-					stylers: [{color: '#1f2835'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#f3d19c'}]
-				},
-				{
-					featureType: 'transit',
-					elementType: 'geometry',
-					stylers: [{color: '#2f3948'}]
-				},
-				{
-					featureType: 'transit.station',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'geometry',
-					stylers: [{color: '#17263c'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#515c6d'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'labels.text.stroke',
-					stylers: [{color: '#17263c'}]
-				}
-				]
-			});
-		}
+	function initMap() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: -8.0475622, lng: -34.8769643},
+			zoom: 12,
+			styles: [
+			{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+			{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+			{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+			{
+				featureType: 'administrative.locality',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#d59563'}]
+			},
+			{
+				featureType: 'poi',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#d59563'}]
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'geometry',
+				stylers: [{color: '#263c3f'}]
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#6b9a76'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry',
+				stylers: [{color: '#38414e'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry.stroke',
+				stylers: [{color: '#212a37'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#9ca5b3'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry',
+				stylers: [{color: '#746855'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry.stroke',
+				stylers: [{color: '#1f2835'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#f3d19c'}]
+			},
+			{
+				featureType: 'transit',
+				elementType: 'geometry',
+				stylers: [{color: '#2f3948'}]
+			},
+			{
+				featureType: 'transit.station',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#d59563'}]
+			},
+			{
+				featureType: 'water',
+				elementType: 'geometry',
+				stylers: [{color: '#17263c'}]
+			},
+			{
+				featureType: 'water',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#515c6d'}]
+			},
+			{
+				featureType: 'water',
+				elementType: 'labels.text.stroke',
+				stylers: [{color: '#17263c'}]
+			}
+			]
+		});
+	}
 
 
 	function initialize() {
-    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
- 
-    var options = {
-        zoom: 5,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
- 
-    map = new google.maps.Map(document.getElementById("mapa"), options);
-}
- 
-initialize();
-[
-    {
-        "Latitude":-8.114590 ,
-        "Longitude": -34.896299
-    },
-    {
-        "Latitude": -22.618827234831404,
-        "Longitude": -42.57636812499999
-    },
-    {
-        "Latitude": -22.57825604463875,
-        "Longitude": -48.68476656249999
-    }
-]
-		function carregarPontos() {
- 
-    $.getJSON('js/pontos.json', function(pontos) {
- 
-        $.each(pontos, function(index, ponto) {
- 
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-                title: "Meu ponto personalizado! :-D",
-                map: map
-            });
- 
-        });
- 
-    });
- 
-}
- 
-carregarPontos();
+		    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
+		 
+		    var options = {
+			        zoom: 5,
+			        center: latlng,
+			        mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		 
+		    map = new google.maps.Map(document.getElementById("mapa"), options);
+	}
+	 
+	initialize();
+	[
+	{
+		"Latitude":-8.114590 ,
+		"Longitude": -34.896299
+	},
+	{
+		"Latitude": -22.618827234831404,
+		"Longitude": -42.57636812499999
+	},
+	{
+		"Latitude": -22.57825604463875,
+		"Longitude": -48.68476656249999
+	}
+	]
+	function carregarPontos() {
 
- 
-var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-    title: "Meu ponto personalizado! :-D",
-    map: map,
-    icon: 'img/marcador.png'
-});
-	</script>
-	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
-	async defer></script>
+		$.getJSON('js/pontos.json', function(pontos) {
+
+			$.each(pontos, function(index, ponto) {
+
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+					title: "Meu ponto personalizado! :-D",
+					map: map
+				});
+
+			});
+
+		});
+
+	}
+
+	carregarPontos();
+
+
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+		title: "Meu ponto personalizado! :-D",
+		map: map,
+		icon: 'img/marcador.png'
+	});
+</script>
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
+async defer></script>
 
 </body>
 
 <h2 style= "position: absolute;top: 50px; left: 1400px; text-shadow:1px 1px 0 #444" >Music Play</h2>
 <audio controls autoplay id="audio" style="position: absolute; left:1400px; top:120px;">
-  <source " src="Jamiroquai - Superfresh Oliver Heldens Remix [thezippyaudio1.com].mp3" loop="1" width="200" height="50" type="audio/ogg" >
-  Your browser does not support the audio element.
-</audio>
-<!-- <embed src="Jamiroquai - Superfresh Oliver Heldens Remix [thezippyaudio1.com].mp3" autostart="true" loop="1" width="200" height="50"></embed> -->
-<script>
-	var audio = document.getElementById('audio');
-	audio.volume = 0.5;
-</script>
+	<source " src="Jamiroquai - Superfresh Oliver Heldens Remix [thezippyaudio1.com].mp3" loop="1" width="200" height="50" type="audio/ogg" >
+		Your browser does not support the audio element.
+	</audio>
+	<!-- <embed src="Jamiroquai - Superfresh Oliver Heldens Remix [thezippyaudio1.com].mp3" autostart="true" loop="1" width="200" height="50"></embed> -->
+	<script>
+		var audio = document.getElementById('audio');
+		audio.volume = 0.5;
+	</script>
 
-</html>
-<div>
-	
-</div>
-<?php include "rodape.php";?>
+	</html>
+	<p id="teste">
+
+	</p>
+	<script>
+		$(document).ready(function() {
+			var h = $(window).height();
+			$('#teste').html(h);
+			if (h <= 1084) {
+				$('footer').css('position', 'absolute');
+			} else {
+				$('footer').css('position', 'relative');
+			}
+		});
+	</script>
+	<?php include "rodape.php";?>
