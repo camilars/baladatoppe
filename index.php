@@ -13,7 +13,7 @@
     <!-- slides das baladas-->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="imagens/imag1.jpg" width="1200" height="700">
+        <img src="imagens/imag1.jpg"  style="  width:12000px; height:990px;">
         <div class="carousel-caption">
           <h2>Quer conheçer as melhores baladas e participar de PROMOÇÕES?</h2>
           <a href="form_cadastro.php" class="btn btn-danger" role="button">CADASTRE-SE</a>

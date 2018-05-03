@@ -281,9 +281,9 @@ if(isset($_GET['estado'])){
   <title></title>
 </head>
 <body>
-<div id="comment-container"  style ="display: block;">
-	<h1 style="background-color: #264899;color: white">Comentários da balada </h1>
-<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll;">	
+<div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
+	<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
+<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
 	<?php
 	$a=file('comentarios.txt');	
 	implode("\n", $a);
@@ -293,8 +293,8 @@ if(isset($_GET['estado'])){
 </div>
 </div>
 <form method="POST" action="coment.php">
-  <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1100px; top:450px; width: 600px; background-color: transparent;" required="e preciso adicinar comentarios para enviar.">
-  <input type="submit" value="Enviar" style="position: absolute; left:1770px; top:450px;"">
+  <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
+  <input type="submit" value="Enviar" style="position: absolute; left:1800px; top:415px;"">
 
 </form>
 <style>
@@ -311,6 +311,7 @@ if(isset($_GET['estado'])){
 
 
 	<script>
+
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center: {lat: -8.0475622, lng: -34.8769643},
@@ -398,6 +399,61 @@ if(isset($_GET['estado'])){
 			});
 		}
 
+
+	function initialize() {
+    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
+ 
+    var options = {
+        zoom: 5,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    map = new google.maps.Map(document.getElementById("mapa"), options);
+}
+ 
+initialize();
+[
+    {
+        "Latitude":-8.114590 ,
+        "Longitude": -34.896299
+    },
+    {
+        "Latitude": -22.618827234831404,
+        "Longitude": -42.57636812499999
+    },
+    {
+        "Latitude": -22.57825604463875,
+        "Longitude": -48.68476656249999
+    }
+]
+		function carregarPontos() {
+ 
+    $.getJSON('js/pontos.json', function(pontos) {
+ 
+        $.each(pontos, function(index, ponto) {
+ 
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+                title: "Meu ponto personalizado! :-D",
+                map: map
+            });
+ 
+        });
+ 
+    });
+ 
+}
+ 
+carregarPontos();
+
+ 
+var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+    title: "Meu ponto personalizado! :-D",
+    map: map,
+    icon: 'img/marcador.png'
+});
 	</script>
 	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 	async defer></script>
