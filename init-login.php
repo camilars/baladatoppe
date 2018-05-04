@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+define('USERS_FILE', 'usuarios.csv');
+// define('DATA_FILE', 'data.txt');
+define('DATA_SEPARATOR', ';;;');
 
 function login($user, $pw) {
     $logins = file('usuarios.csv');
@@ -29,12 +32,12 @@ function redirect($page) {
 function getUsers() {
     $fileData = file(USERS_FILE);
     $users = array_map(function($el) {
-        return explode(':', $el)[0];
+        return explode(',', $el)[0];
     }, $fileData);
     return $users;
 }
 function addUser($user, $pw) {
-    $data = $user . ':' . md5($pw);
+    $data = $user . ',' . $pw;
     addRegister(USERS_FILE, $data);
 }
 function flash($msg) {
