@@ -1,19 +1,26 @@
 <?php include "header.php"; ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<link rel="stylesheet" type="text/css" href="update.css">
+<?php
 
+$linha = $_GET['usuario'];
+
+$data = file('usuarios.csv'); // lê o arquivo para um array
+$livro = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
+$dados_livro = explode(',', $livro); // pega os dados do livro e coloca no array $dados_livro
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="update.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
 <body>
-<h1>Editar</h1>
-<form action="update.php" method="POST">
-Login :	<input type="text" name="login" value="" required><br><br>
-Senha :	<input type="password" name="senha" value="" required><br><br>
-		<input type="hidden" value="<? $linha ?>">
-	<input type="submit" value="Editar">
-</form>
+    <form action="edit.php" method="POST">
+       Login :<input type="text" name="login" value="<?=$dados_livro[0]?>">
+        Senha:<input type="password" name="password" value="<?=$dados_livro[1]?>">
+        <input type="submit">
+    </form>
 </body>
 </html>
 

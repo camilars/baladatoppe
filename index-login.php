@@ -273,11 +273,66 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 </html> 
 
 <script>
+	function initialize() {
+		    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
+		 
+		    var options = {
+			        zoom: 5,
+			        center: latlng,
+			        mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		 
+		    map = new google.maps.Map(document.getElementById("mapa"), options);
+	}
+	 
+	initialize();
+	[
+	{
+		"Latitude":-8.114590 ,
+		"Longitude": -34.896299
+	},
+	{
+		"Latitude": -22.618827234831404,
+		"Longitude": -42.57636812499999
+	},
+	{
+		"Latitude": -22.57825604463875,
+		"Longitude": -48.68476656249999
+	}
+	]
+	function carregarPontos() {
+
+		$.getJSON('js/pontos.json', function(pontos) {
+
+			$.each(pontos, function(index, ponto) {
+
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+					title: "Meu ponto personalizado! :-D",
+					map: map
+				});
+
+			});
+
+		});
+
+	}
+
+	carregarPontos();
+
+
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+		title: "Meu ponto personalizado! :-D",
+		map: map,
+		icon: 'img/marcador.png'
+	});
 
 	function initMap() {
 		var map = new google.maps.Map(document.getElementById('map'), {
 			center: {lat: -8.0475622, lng: -34.8769643},
 			zoom: 12,
+
 			styles: [
 			{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
 			{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -362,60 +417,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 	}
 
 
-	function initialize() {
-		    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
-		 
-		    var options = {
-			        zoom: 5,
-			        center: latlng,
-			        mapTypeId: google.maps.MapTypeId.ROADMAP
-		    };
-		 
-		    map = new google.maps.Map(document.getElementById("mapa"), options);
-	}
-	 
-	initialize();
-	[
-	{
-		"Latitude":-8.114590 ,
-		"Longitude": -34.896299
-	},
-	{
-		"Latitude": -22.618827234831404,
-		"Longitude": -42.57636812499999
-	},
-	{
-		"Latitude": -22.57825604463875,
-		"Longitude": -48.68476656249999
-	}
-	]
-	function carregarPontos() {
-
-		$.getJSON('js/pontos.json', function(pontos) {
-
-			$.each(pontos, function(index, ponto) {
-
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-					title: "Meu ponto personalizado! :-D",
-					map: map
-				});
-
-			});
-
-		});
-
-	}
-
-	carregarPontos();
-
-
-	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-		title: "Meu ponto personalizado! :-D",
-		map: map,
-		icon: 'img/marcador.png'
-	});
+	
 </script>
 <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 async defer></script>
