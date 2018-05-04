@@ -26,5 +26,28 @@ function logout() {
 function redirect($page) {
     header('location: ' . $page);
 }
+function getUsers() {
+    $fileData = file(USERS_FILE);
+    $users = array_map(function($el) {
+        return explode(':', $el)[0];
+    }, $fileData);
+    return $users;
+}
+function addUser($user, $pw) {
+    $data = $user . ':' . md5($pw);
+    addRegister(USERS_FILE, $data);
+}
+function flash($msg) {
+    $_SESSION['flash'] = $msg;
+    $_SESSION['setFlash'] = true;
+}
+function addRegister($fileName, $data) {
+    if (!file_exists($fileName)) {
+        touch($fileName);
+    }
 
+    $fileData = file($fileName);
+    $fileData[] = $data . "\n";
+    file_put_contents($fileName, implode('', $fileData));
+}
 ?>
