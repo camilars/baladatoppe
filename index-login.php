@@ -142,7 +142,7 @@
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="update.php">Editar conta</a>
-						<a href="musica.php">Playlist</a>
+						<!-- <a href="bar.php">Playlist</a> --> -->
 						<a href="logout.php">Sair</a>
 					</div>
 
@@ -201,7 +201,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 					<li><a href="index-login.php?barb=MannyDeck">Manny Deck</a></li>
 					<li><a href="index-login.php?barb=Winner">Winner</a></li>
 					<li><a href="index-login.php?barb=Liverpool">Liverpool</a></li>
-					<li><a href="index-login.php?barb=NOX">NOX</a></li>
+					<li><a href="index-login.php?barb=NOX">NOX</a></li> -->
 				</ul>
 			</div>
 

@@ -24,7 +24,7 @@
           </div>
           
           <div class="col-md-1">
-            <a href=""><i class="fab fa-instagram fa-3x"></i></a>
+            <a class="fab fa-instagram fa-3x"></i></a>
           </div>
           
           <div class="col-md-1">
