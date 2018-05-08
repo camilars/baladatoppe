@@ -57,10 +57,11 @@
             <li><a href="index-login.php"><?= strtoupper($_SESSION['user-logged'])?></a></li>
             <li><a href="logout.php">LOGOUT <i class="fas fa-sign-out-alt"></i></a></li>
           <?php else: ?>
-            <li><a href="login.php">LOGIN <i class="fas fa-user"></i></a></li>
+            <li><a  href="login.php">LOGIN <i class="fas fa-user"></i></a></li>
           <?php endif ?> 
           <li></li>
         </ul>
       </div>
     </div>
+    
   </nav>

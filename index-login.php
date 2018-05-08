@@ -273,172 +273,34 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 </html> 
 
 <script>
-	function initialize() {
-		    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
-		 
-		    var options = {
-			        zoom: 5,
-			        center: latlng,
-			        mapTypeId: google.maps.MapTypeId.ROADMAP
-		    };
-		 
-		    map = new google.maps.Map(document.getElementById("mapa"), options);
-	}
-	 
-	initialize();
-	[
-	{
-		"Latitude":-8.114590 ,
-		"Longitude": -34.896299
-	},
-	{
-		"Latitude": -22.618827234831404,
-		"Longitude": -42.57636812499999
-	},
-	{
-		"Latitude": -22.57825604463875,
-		"Longitude": -48.68476656249999
-	}
-	]
-	function carregarPontos() {
-
-		$.getJSON('js/pontos.json', function(pontos) {
-
-			$.each(pontos, function(index, ponto) {
-
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-					title: "Meu ponto personalizado! :-D",
-					map: map
-				});
-
-			});
-
-		});
-
-	}
-
-	carregarPontos();
-
-
-	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-		title: "Meu ponto personalizado! :-D",
-		map: map,
-		icon: 'img/marcador.png'
-	});
-
-	function initMap() {
-		var map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: -8.0475622, lng: -34.8769643},
-			zoom: 12,
-
-			styles: [
-			{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-			{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-			{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-			{
-				featureType: 'administrative.locality',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'poi',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'poi.park',
-				elementType: 'geometry',
-				stylers: [{color: '#263c3f'}]
-			},
-			{
-				featureType: 'poi.park',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#6b9a76'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'geometry',
-				stylers: [{color: '#38414e'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'geometry.stroke',
-				stylers: [{color: '#212a37'}]
-			},
-			{
-				featureType: 'road',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#9ca5b3'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'geometry',
-				stylers: [{color: '#746855'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'geometry.stroke',
-				stylers: [{color: '#1f2835'}]
-			},
-			{
-				featureType: 'road.highway',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#f3d19c'}]
-			},
-			{
-				featureType: 'transit',
-				elementType: 'geometry',
-				stylers: [{color: '#2f3948'}]
-			},
-			{
-				featureType: 'transit.station',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#d59563'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'geometry',
-				stylers: [{color: '#17263c'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'labels.text.fill',
-				stylers: [{color: '#515c6d'}]
-			},
-			{
-				featureType: 'water',
-				elementType: 'labels.text.stroke',
-				stylers: [{color: '#17263c'}]
-			}
-			]
-		});
-	}
-
-
-	
+	<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+ <!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap">
+function initMap() {
+  var uluru = {lat: -25.363, lng: 131.044};
+  var metro = {lat:-8.059444, lng: -34.8914412};
+  var uk = {lat:-8.1148764, lng:-34.8963423};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+  var uk = new google.maps.Marker({
+  position: uk,
+  map: map
+  
+  });
+  var metro = new google.maps.Marker({
+  position: metro,
+  map: map
+  })
+  }
 </script>
-<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
-async defer></script>
 
-</body>
-
-
-
-	</html>
-	<p id="teste">
-
-	</p>
-	<script>
-		$(document).ready(function() {
-			var h = $(window).height();
-			$('#teste').html(h);
-			if (h <= 1084) {
-				$('footer').css('position', 'absolute');
-			} else {
-				$('footer').css('position', 'relative');
-			}
-		});
 	</script>
 	<?php include "rodape.php";?>
