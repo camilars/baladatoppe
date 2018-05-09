@@ -4,7 +4,9 @@ include_once "init-login.php";
 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
-$usuarios = $usuario.",".$senha;
+$balada =$_POST['promoter'];
+$usuarios = $usuario.",".$senha.",".$balada;
+
 
 $date = file('usuarios.csv' );
 $date [] = $usuarios."\n";

@@ -9,19 +9,27 @@ function login($user, $pw) {
     $logins = file('usuarios.csv');
     for ($i = 0; $i < sizeof($logins); $i++) {
         $logins[$i] = trim($logins[$i]);
-    }
-    $user_pw = $user . ',' . $pw;
-    if (in_array($user_pw, $logins)) {
+        $balad = explode(",", $logins[$i]);
+        if ($user == $balad [0] && $pw == $balad[1]) {
         $_SESSION['user-logged'] =  $user;
-        return true;
+         if ($balad[2] == "sim") {
+             $_SESSION['balada'] = true; 
+             return true;
+         }
+         return true;
+        }
+
     }
     return false;
-}
+  
+} 
 
 function is_logged() {
     return isset($_SESSION['user-logged']);
 }
-
+function balada() {
+    return isset($_SESSION['balada']);
+}
 function logout() {
     unset($_SESSION['user-logged']);
 }
