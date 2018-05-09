@@ -142,7 +142,7 @@
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="update.php">Editar conta</a>
-						<!-- <a href="bar.php">Playlist</a> --> -->
+						 <a href="cadas-balada.php">Cadastrar baladas</a> 
 						<a href="logout.php">Sair</a>
 					</div>
 
@@ -294,6 +294,7 @@ function initMap() {
   });
   var marker = new google.maps.Marker({
     position: recife,
+    icon:"fontawesome/thermometer-full.svg",
     map: map
   });
   var loc = new google.maps.Marker({

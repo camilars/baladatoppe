@@ -23,7 +23,7 @@
                         <?php unset($_SESSION['flash']) ?>
                     <?php endif ?>
                     <div class="col-md-7"> 
-                     <label for="promoter">Você e promoter?</label>
+                     <label for="promoter">Cadastrar como proprietário?</label>
                     <select  class="form-control" name="promoter">
                         <option  value="default">Selecionar</option>
                         <option  value="sim">Sim</option>
