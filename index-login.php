@@ -271,50 +271,40 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 </style>
 </body>
 </html> 
-
+<style >
+	#map {
+  height: 600px;
+  width: 40%;
+ }
+</style>
+<div id="map"></div>
+ <!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+</script> 
 <script>
-	function initialize() {
-		    var latlng = new google.maps.LatLng(-8.114590, -34.896299);
-		 
-		    var options = {
-			        zoom: 5,
-			        center: latlng,
-			        mapTypeId: google.maps.MapTypeId.ROADMAP
-		    };
-		 
-		    map = new google.maps.Map(document.getElementById("mapa"), options);
-	}
-	 
-	
-	function carregarPontos() {
-
-		$.getJSON('js/pontos.json', function(pontos) {
-
-			$.each(pontos, function(index, ponto) {
-
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
-					title: "Meu ponto personalizado! :-D",
-					map: map
-				});
-
-			});
-
-		});
-
-	}
-
-	function initMap() {
-		var map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: -8.0475622, lng: -34.8769643},
-			zoom: 12,
-
-			
-		});
-	}
-
-
-	
+function initMap() {
+  // var uluru = {lat: -25.363, lng: 131.044};
+  var recife = {lat: -8.1148764, lng: -34.8963423};
+  var manny = {lat:-8.014136, lng: -34.84473};
+  var uk = {lat: -8.1148764, lng: -34.8963423};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: recife
+  });
+  var marker = new google.maps.Marker({
+    position: recife,
+    map: map
+  });
+  var loc = new google.maps.Marker({
+  	position: uk,
+  	map: map
+  });
+  var deck = new google.maps.Marker({
+  	position: manny,
+  	map: map
+  });
+}
 </script>
 <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 async defer></script>
@@ -324,18 +314,5 @@ async defer></script>
 
 
 	</html>
-	<p id="teste">
-
-	</p>
-	<script>
-		$(document).ready(function() {
-			var h = $(window).height();
-			$('#teste').html(h);
-			if (h <= 1084) {
-				$('footer').css('position', 'absolute');
-			} else {
-				$('footer').css('position', 'relative');
-			}
-		});
-	</script>
+	
 	<?php include "rodape.php";?>

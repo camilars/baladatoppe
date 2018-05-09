@@ -4,68 +4,109 @@
 
 <body>
 
-<div style="margin-top:300px ;" >
-<p id="demo" style="font-size: 24px;">Clique no botão para obter sua localização:</p>
-<button onclick="getLocation()" style="margin-left:48%;">Clique aqui</button>
-<div id="mapholder"></div>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXxe_P1-dfG5zlclrPO-fmEZNka6-KrFs&callback=initMap">
-    </script>
-<script>
-var x=document.getElementById("demo");
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition,showError);
-    }
-  else{x.innerHTML="Geolocalização não é suportada nesse browser.";}
-  }
- 
-function showPosition(position)
-  {
-  lat=position.coords.latitude;
-  lon=position.coords.longitude;
-  latlon=new google.maps.LatLng(lat, lon)
-  mapholder=document.getElementById('mapholder')
-  mapholder.style.height='450px';
-  mapholder.style.width='100%';
- 
-  var myOptions={
-  center:latlon,zoom:14,
-  mapTypeId:google.maps.MapTypeId.ROADMAP,
-  mapTypeControl:false,
-  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
-  };
-  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
-  var marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
-  }
- 
-function showError(error)
-  {
-  switch(error.code)
-    {
-    case error.PERMISSION_DENIED:
-      x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML="Localização indisponível."
-      break;
-    case error.TIMEOUT:
-      x.innerHTML="O tempo da requisição expirou."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML="Algum erro desconhecido aconteceu."
-      break;
-    }
-  }
-</script>
+
+<?php if ($_GET['barb']): ?>
+  <?php  ?>
+  <ul>
+    <?php foreach ($variable as $key => $value): ?>
+      <li><?= $value ?></li>
+    <?php endforeach ?>
+  </ul>
+<?php endif ?>
+
+
+<div id="rolamento">
+
+  
+  <label> <div class="w3-container w3-white">
+    <h2 style=" position: relative;top: 50px; left: 1000px; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
+
+    <td>
+
+    </div>
+    <div class="dropdown" style="position: absolute; left:1000px; top:120px;">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">selecionar
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+
+          <li><a href="mapa.php?barb=UK">UK</a></li>
+          <li><a href="mapa.php?barb=MannyDeck">Manny Deck</a></li>
+          <li><a href="mapa.php?barb=Winner">Winner</a></li>
+          <li><a href="mapa.php?barb=Liverpool">Liverpool</a></li>
+          <li><a href="mapa.php?barb=NOX">NOX</a></li> -->
+        </ul>
+      </div>
+
+    </div>
+  </label>
+  <h1>Não encontrou sua balada favorita? <a href="form_cadastro.php">Cadastre-se</a></h1>
 </div>
-</body>
+<div style="background-color: white; width: 40%;height: 25%; display: block;">
+  
+  <?php
+  if(isset($_GET['barb'])){
+    $state = $_GET['barb'];
 
+    $h = file($state . ".csv");
 
-</html>
+    $i = empty($h);
+    foreach ($h as $value) {
+      if ($value == end($h)) {
+        echo '<a href=' . $value . ' target="_blank">' . $value . '</a>';
+      }
+      else{
+        echo $value.'<br>';
+      }
+    }
 
+    if($i){
+
+      echo "<h3>Pub não encontrado,</h3>";
+
+    }
+
+  }
+  ?>
+  
+</div>
+
+<style >
+  #map {
+  height: 600px;
+  width: 40%;
+ }
+</style>
+<div id="map"></div>
+ <!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+</script> 
+<script>
+function initMap() {
+  // var uluru = {lat: -25.363, lng: 131.044};
+  var recife = {lat: -8.0578381, lng:-34.8828969};
+  //var manny = {lat:-8.014136, lng: -34.84473};
+  //var uk = {lat: -8.1148764, lng: -34.8963423};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: recife
+  });
+  var marker = new google.maps.Marker({
+    position: recife,
+    map: map
+  });
+  var loc = new google.maps.Marker({
+    position: uk,
+    map: map
+  });
+  var deck = new google.maps.Marker({
+    position: manny,
+    map: map
+  });
+}
+</script>
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
+async defer></script>
 
  
 
