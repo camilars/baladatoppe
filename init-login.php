@@ -12,6 +12,7 @@ function login($user, $pw) {
         $balad = explode(",", $logins[$i]);
         if ($user == $balad [0] && $pw == $balad[1]) {
         $_SESSION['user-logged'] =  $user;
+        $balad[2] = trim($balad[2]);
          if ($balad[2] == "sim") {
              $_SESSION['balada'] = true; 
              return true;
@@ -32,6 +33,9 @@ function balada() {
 }
 function logout() {
     unset($_SESSION['user-logged']);
+    if (isset($_SESSION['balada'])) {
+        unset($_SESSION['balada']);
+    }
 }
 
 function redirect($page) {

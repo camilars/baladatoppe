@@ -1,5 +1,6 @@
 header {
     min-height: 200px;
+
   
 }
 article {
@@ -12,5 +13,6 @@ footer {
     bottom: 0px; 
     width: 100%; 
     height: 160px; 
+    position: fixed;
  
 }
