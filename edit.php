@@ -4,7 +4,7 @@
 
     $nome = $_POST['login'];
     $pages = $_POST['senha'];
-     $linha = $_POST['linha'];
+    $linha = $_POST['linha'];
   
 
     if (!file_exists($filename)) {

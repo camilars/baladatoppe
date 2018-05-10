@@ -5,16 +5,6 @@
 <body>
 
 
-<?php if ($_GET['barb']): ?>
-  <?php  ?>
-  <ul>
-    <?php foreach ($variable as $key => $value): ?>
-      <li><?= $value ?></li>
-    <?php endforeach ?>
-  </ul>
-<?php endif ?>
-
-
 <div id="rolamento">
 
   
@@ -33,7 +23,7 @@
           <li><a href="mapa.php?barb=MannyDeck">Manny Deck</a></li>
           <li><a href="mapa.php?barb=Winner">Winner</a></li>
           <li><a href="mapa.php?barb=Liverpool">Liverpool</a></li>
-          <li><a href="mapa.php?barb=NOX">NOX</a></li> -->
+          <li><a href="mapa.php?barb=NOX">NOX</a></li>
         </ul>
       </div>
 
@@ -74,6 +64,7 @@
   #map {
   height: 600px;
   width: 40%;
+  border-radius: 20px 20px;
  }
 </style>
 <div id="map"></div>

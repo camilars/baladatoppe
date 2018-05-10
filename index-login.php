@@ -19,6 +19,7 @@
   	height: 50%;
   	width: 40%;
   	margin-top:30px ;
+  	border-radius: 20px 20px;
 
   }
   embed {
@@ -47,10 +48,8 @@
   	background-attachment: fixed;
   }
 
-  #buscar{
-  	margin-top: 60px;
-  	margin-bottom: 10px;
-  }
+ 
+
   #comment-container {
   	max-height: 230px;
   	position: absolute;
@@ -142,7 +141,7 @@
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="update.php">Editar conta</a>
-						 <a href="cadas-balada.php">Cadastrar baladas</a> 
+						<a href="cadas-balada.php">Cadastrar baladas</a> 
 						<a href="logout.php">Sair</a>
 					</div>
 
@@ -165,7 +164,8 @@
 	</div>
 </nav>
 
-<input id="buscar" type="text" name="buscar" placeholder="Buscar">
+<br>
+<br>
 
 <div id="map"></div>
 
@@ -173,14 +173,6 @@
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5M9l0N2Ag&callback=initMap">
 </script>
 
-<?php if ($_GET['barb']): ?>
-	<?php  ?>
-	<ul>
-		<?php foreach ($variable as $key => $value): ?>
-			<li><?= $value ?></li>
-		<?php endforeach ?>
-	</ul>
-<?php endif ?>
 
 
 <div id="rolamento">
@@ -193,7 +185,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5
 
 		</div>
 		<div class="dropdown" style="position: absolute; left:1000px; top:120px;">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">selecionar
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Vizualizar
 				<span class="caret"></span></button>
 				<ul class="dropdown-menu">
 
@@ -294,7 +286,6 @@ function initMap() {
   });
   var marker = new google.maps.Marker({
     position: recife,
-    icon:"fontawesome/thermometer-full.svg",
     map: map
   });
   var loc = new google.maps.Marker({

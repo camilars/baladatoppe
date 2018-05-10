@@ -21,11 +21,13 @@ for($i = 0; $i < sizeof($data); $i++ ) {
            <tr>
                 <td><?= $elemento[0] ?></td>
                 <td><?= $elemento[1] ?></td>
-                <td><a href="edite.php?linha=<?=$linha?>">Edit</a></td>    
+                <td><a href="edite.php?linha=<?=$linha?>">Edit</a></td>
+                <td><a href="deletarconta.php?linha=<?=$linha?>"> Excluir Conta</a></td>    
             </tr> 
            <?php endif ?> 
         <?php endforeach ?>
     </table>
-    <a href="logout.php">Sair</a>
+    <a href="logout.php">Sair</a><p>
+    <a href="index-login.php">Voltar</a>
 </body>
 </html>
