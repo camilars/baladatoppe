@@ -1,11 +1,11 @@
 <?php
 include 'init_login.php';
 $balada = $_POST['balada'];
-$data = file ('bar.csv');
+$data = file ('balada.csv');
 $data[] = $balada . "\n";
-if (addUser($balada);{
-		file_put_contents('bar.csv', );
-		redirect('login.php');) {
+if (addPub($data)){
+		file_put_contents('balada.csv', $balada);
+		redirect('index-login.php'); 
  }
-}
+?>
  

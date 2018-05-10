@@ -2,9 +2,9 @@
 
 $linha = $_GET['linha'];
 
-$data = file('user.csv'); // lê o arquivo para um array
-$usuarios = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
-$dados_usuarios = explode(',', $usuarios); // pega os dados do livro e coloca no array $dados_livro
+$data = file('usuarios.csv'); 
+$usuarios = trim($data[$linha]); 
+$dados_usuarios = explode(',', $usuarios);
 
 ?>
 <!DOCTYPE html>

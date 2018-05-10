@@ -61,4 +61,9 @@ function addRegister($fileName, $data) {
     $fileData[] = $data . "\n";
     file_put_contents($fileName, implode('', $fileData));
 }
+function addPub ($fileName, $data){
+    if(!file_exists($data)){
+        touch($data);
+    }
+}
 ?>

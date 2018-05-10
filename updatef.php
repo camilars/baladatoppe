@@ -1,6 +1,6 @@
 <?php
-include 'init.php';
-$filename = 'user.csv';
+include 'init-login.php';
+$filename = 'usuarios.csv';
 $data = file($filename);
 for($i = 0; $i < sizeof($data); $i++ ) {
     $data[$i] = explode(',', $data[$i]);
@@ -17,7 +17,7 @@ for($i = 0; $i < sizeof($data); $i++ ) {
     <h1></h1>
     <table cellpadding="10">
         <?php foreach ($data as $linha => $elemento): ?>
-           <?php if($elemento[0] == $_SESSION['user']): ?> 
+           <?php if($elemento[0] == $_SESSION['user-logged']): ?> 
            <tr>
                 <td><?= $elemento[0] ?></td>
                 <td><?= $elemento[1] ?></td>
@@ -26,6 +26,6 @@ for($i = 0; $i < sizeof($data); $i++ ) {
            <?php endif ?> 
         <?php endforeach ?>
     </table>
-    <a href="login.php">Sair</a>
+    <a href="logout.php">Sair</a>
 </body>
 </html>
