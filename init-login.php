@@ -6,68 +6,69 @@ define('USERS_FILE', 'usuarios.csv');
 define('DATA_SEPARATOR', ';;;');
 
 function login($user, $pw) {
-    $logins = file('usuarios.csv');
-    for ($i = 0; $i < sizeof($logins); $i++) {
-        $logins[$i] = trim($logins[$i]);
-        $balad = explode(",", $logins[$i]);
-        if ($user == $balad [0] && $pw == $balad[1]) {
-        $_SESSION['user-logged'] =  $user;
-        $balad[2] = trim($balad[2]);
-         if ($balad[2] == "sim") {
-             $_SESSION['balada'] = true; 
-             return true;
-         }
-         return true;
-        }
+	$logins = file('usuarios.csv');
+	for ($i = 0; $i < sizeof($logins); $i++) {
+		$logins[$i] = trim($logins[$i]);
+		$balad = explode(",", $logins[$i]);
+		if ($user == $balad [0] && $pw == $balad[1]) {
+			$_SESSION['user-logged'] =  $user;
+			$balad[2] = trim($balad[2]);
+			if ($balad[2] == "sim") {
+				$_SESSION['balada'] = true; 
+				return true;
+			}
+			return true;
+		}
 
-    }
-    return false;
-  
+	}
+	return false;
+
 } 
 
 function is_logged() {
-    return isset($_SESSION['user-logged']);
+	return isset($_SESSION['user-logged']);
 }
 function balada() {
-    return isset($_SESSION['balada']);
+	return isset($_SESSION['balada']);
 }
 function logout() {
-    unset($_SESSION['user-logged']);
-    if (isset($_SESSION['balada'])) {
-        unset($_SESSION['balada']);
-    }
+	unset($_SESSION['user-logged']);
+	if (isset($_SESSION['balada'])) {
+		unset($_SESSION['balada']);
+	}
 }
 
 function redirect($page) {
-    header('location: ' . $page);
+	header('location: ' . $page);
 }
 function getUsers() {
-    $fileData = file(USERS_FILE);
-    $users = array_map(function($el) {
-        return explode(',', $el)[0];
-    }, $fileData);
-    return $users;
+	$fileData = file(USERS_FILE);
+	$users = array_map(function($el) {
+		return explode(',', $el)[0];
+	}, $fileData);
+	return $users;
 }
 function addUser($user, $pw) {
-    $data = $user . ',' . $pw;
-    addRegister(USERS_FILE, $data);
+	$data = $user . ',' . $pw;
+	addRegister(USERS_FILE, $data);
 }
 function flash($msg) {
-    $_SESSION['flash'] = $msg;
-    $_SESSION['setFlash'] = true;
+	$_SESSION['flash'] = $msg;
+	$_SESSION['setFlash'] = true;
 }
 function addRegister($fileName, $data) {
-    if (!file_exists($fileName)) {
-        touch($fileName);
-    }
+	if (!file_exists($fileName)) {
+		touch($fileName);
+	}
 
-    $fileData = file($fileName);
-    $fileData[] = $data . "\n";
-    file_put_contents($fileName, implode('', $fileData));
+	$fileData = file($fileName);
+	$fileData[] = $data . "\n";
+	file_put_contents($fileName, implode('', $fileData));
 }
 function addPub ($fileName, $data){
-    if(!file_exists($data)){
-        touch($data);
-    }
+	if(!file_exists($fileName)){
+		file($fileName);
+	}
+	file_put_contents($fileName, $data);
 }
 ?>

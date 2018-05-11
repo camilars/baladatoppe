@@ -141,7 +141,7 @@
                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                  <a href="#" data-toggle="modal" data-target="#editModal" >Editar conta</a>
                  <?php if (balada()): ?>
-                   <a href="cadas-balada.php">Cadastrar baladas</a> 
+                   <a href="carregar.php">Cadastrar baladas</a> 
                  <?php endif ?>
                  <a href="logout.php">Sair</a>
                </div>
