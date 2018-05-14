@@ -1,26 +1,20 @@
 <?php
 // ob_start();
+include("conexao.php");
 include_once "init-login.php";
 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 $balada =$_POST['promoter'];
-$usuarios = $usuario.",".$senha.",".$balada;
 
 
-$date = file('usuarios.csv' );
-$date [] = $usuarios."\n";
-$date_str = implode('',$date);
-if (isset($usuario) && isset($senha)) {
+$consulta=$conn->prepare("INSERT INTO usuarios(usuario,senha,balada) VALUES(?,?,?)");
+$consulta->bindParam(1,$usuario);
+$consulta->bindParam(2,$senha);
+$consulta->bindParam(3,$balada);
 
-	$users = getUsers();
-	if (in_array($usuario, $users)) {
-		flash("Usuário já registrado, utilize outro username.");
-		redirect('form_cadastro.php');
-	} else {
-		addUser($usuario, $senha);
-		file_put_contents('usuarios.csv', $date_str);
-		redirect('login.php');
-	}
-}
+$consulta->execute();
+
+header('location:login.php');
+
 ?>

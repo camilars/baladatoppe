@@ -1,4 +1,5 @@
-             <?php include_once 'init-login.php' ?>
+             <?php include_once 'init-login.php' 
+             ?>
              <!DOCTYPE html>
              <html lang="en">
              <head>
@@ -84,7 +85,7 @@
            					<li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
 
 
-           					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:blue;"><i class="fas fa-user"></i><?php  echo "&nbsp;".$_SESSION['user-logged'];?> </li> 
+           					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:blue;"><i class="fas fa-user"></i><?php  echo "&nbsp;".$_SESSION['user'];?> </li> 
 
 
                      <meta name="viewport" content="width=device-width, initial-scale=1">

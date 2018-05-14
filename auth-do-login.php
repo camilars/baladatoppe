@@ -1,14 +1,22 @@
-<?php
+<?php 
+require_once 'conexao.php';
+session_start();
 
-include 'init-login.php';
+$_SESSION['logado'] = false;
+$_SESSION['user'] = "";
+$usuario = $_POST['usuario'];
+$senha = $_POST['senha'];
 
-$user = $_POST['user'];
-$pw = $_POST['password'];
+$consulta = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?");
+$consulta->bindParam(1,$usuario);
+$consulta->bindParam(2,$senha);
+$consulta->execute();
 
-if (login($user, $pw)) {
-    redirect('index-login.php');
-} else {
-    redirect('login.php');
+
+if ($consulta->rowCount() >= 1) {
+	$_SESSION['user'] = $usuario;
+	$_SESSION['logado'] = true;
+	header('location:index-login.php');
 }
 
 ?>
