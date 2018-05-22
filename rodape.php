@@ -31,7 +31,7 @@
             <i class="fab fa-twitter fa-3x"></i>
           </div>
           <div class="col-md-1">
-            <a href="https://github.com/camilars/baladatoppe" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://github.com/pedrolucass99/baladatoppe" target="_blank"><i class="fab fa-github fa-3x"></i></a>
           </div>
         </div>
     </div>

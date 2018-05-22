@@ -38,8 +38,6 @@
              	}
              	html, body {
              		height: 100%;
-             		/*margin: 0;*/
-             		/*padding: 0;*/
              		width:100%;
              	}
 
@@ -289,7 +287,7 @@ li{
                  <div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
                   
                 	<?php 
-                	$consult = $conn->prepare('select * from comentarios');
+                	$consult = $conn->prepare('select * from cometario');
                 	$consult->execute();
                 	$i = 0;
                 	$results=$consult->fetchAll();

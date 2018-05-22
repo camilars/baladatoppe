@@ -11,7 +11,7 @@ function criar($b){
 	$arquivo_tpm = $_FILES['arquivo']['tmp_name'];
 	$fileName = $b['name'];
 	$extensao = strchr($fileName,'.');
-	// var_dump($extensao);
+
 	if(strstr('.jpg; .jpeg; .git; .png', $extensao)){
 		$newName = $_SESSION['user-logged'] .$extensao;
 		$destino = 'imagem/' .basename($newName);
@@ -33,6 +33,6 @@ function criar($b){
 addPub($file, $data);
 
 criar($_FILES['arquivo']);
-// redirect('index-login.php'); 
+ 
 
 ?>
