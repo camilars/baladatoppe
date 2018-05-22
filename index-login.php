@@ -76,7 +76,7 @@
            					<span class="icon-bar"></span>
            					<span class="icon-bar"></span>                        
            				</button>
-           				<a class="navbar-brand" href="#myPage">Balada Top</a>
+           				<a class="navbar-brand" href="index.php">Balada Top</a>
            			</div>
            			<div class="collapse navbar-collapse" id="myNavbar">
            				<ul class="nav navbar-nav navbar-right">
@@ -85,7 +85,7 @@
            					<li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
 
 
-           					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:blue;"><i class="fas fa-user"></i><?php  echo "&nbsp;".$_SESSION['user'];?> </li> 
+           					<li style=" font-size: 14px !important;text-decoration: none; margin-top: 15px; color:blue;"><i class="fas fa-user"></i><?php  echo "&nbsp;".$_SESSION['user-logged'];?> </li> 
 
 
                      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -142,6 +142,7 @@
                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                  <a href="#" data-toggle="modal" data-target="#editModal" >Editar conta</a>
                  <?php if (balada()): ?>
+                 	<a href="#">baladas da semana</a>
                    <a href="carregar.php">Cadastrar baladas</a> 
                  <?php endif ?>
                  <a href="logout.php">Sair</a>
@@ -286,16 +287,27 @@ li{
                 <div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
                  <h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
                  <div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
-                  <?php
-                  $a=file('comentarios.txt');	
-                  implode("\n", $a);
-                  for ($i=0; $i < sizeof($a); $i++): ?>
-                  <li ><?=  $a[$i] ?><a href="delete.php?id=<?= $i ?>"> X </a></li>
-                <?php endfor?>
+                  
+                	<?php 
+                	$consult = $conn->prepare('select * from comentarios');
+                	$consult->execute();
+                	$i = 0;
+                	$results=$consult->fetchAll();
+
+                	foreach ($results as $result) {
+                		$user = $result['usuarios_id'];
+	                	$consulta = $conn->prepare("select usuario from usuarios where id = '$user'");
+	                	$consulta->execute();
+	                	$res = $consulta->fetch(PDO::FETCH_ASSOC);
+                		echo "<p><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
+                		$i++;
+                	}
+
+                	 ?>
               </div>
             </div>
             <form method="POST" action="coment.php">
-              <input type="text"   name="text"  placeholder="comentarios " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
+              <input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
               <input type="submit" value="Enviar" style="position: absolute; left:1800px; top:415px;"">
 
             </form>

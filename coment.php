@@ -1,20 +1,30 @@
 <?php 
-session_start();
-// include_once 'init-login.php';
-$usuario = $_SESSION['user-logged'];
 
+include 'init-login.php';
 
-$comentario = '<b>' . $usuario . '</b>: ' . $_POST['text'];
+if (is_logged()) {
+	echo 'entrou<br>';# code...
 
+	$user = $_SESSION['user-logged'];
+	$consult = $conn->prepare("select id from usuarios where usuario = '$user'");
+	$consult->execute();
+	$result = $consult->fetch(PDO::FETCH_ASSOC);
+	$user_id = $result['id'];
 
-$fileComentario='comentarios.txt';
+	$texto = $_POST['texto'];
+	echo $user_id . '<br>';
+	$sql = "INSERT INTO comentarios(texto, usuarios_id) VALUES (:texto, :usuarios_id)";
+	$consulta=$conn->prepare($sql);
+	$consulta->bindParam(':texto', $texto);
+	$consulta->bindParam(':usuarios_id', $user_id);
 
-$data = file($fileComentario);
-$data[] = $comentario. "\n";
+	$res = $consulta->execute();
+	if ($res) {
+		header('location:index-login.php');
+	} else {
+		echo 'erro ao salvar';
+		// echo ''
+	}
 
-$dataStr = implode("", $data);
-file_put_contents($fileComentario, $dataStr);
-$a= $dataStr;
-	header('location:index-login.php');
-	?>
-
+}
+?>

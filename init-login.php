@@ -1,28 +1,26 @@
 <?php
 
 session_start();
-define('USERS_FILE', 'usuarios.csv');
-// define('DATA_FILE', 'data.txt');
-define('DATA_SEPARATOR', ';;;');
+require_once 'conexao.php';
 
 function login($user, $pw) {
-	$logins = file('usuarios.csv');
-	for ($i = 0; $i < sizeof($logins); $i++) {
-		$logins[$i] = trim($logins[$i]);
-		$balad = explode(",", $logins[$i]);
-		if ($user == $balad [0] && $pw == $balad[1]) {
-			$_SESSION['user-logged'] =  $user;
-			$balad[2] = trim($balad[2]);
-			if ($balad[2] == "sim") {
-				$_SESSION['balada'] = true; 
-				return true;
-			}
+	$sql = "SELECT * FROM usuarios WHERE usuario = '$user' AND senha = '$pw'";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	$rows = $stmt->rowCount();
+	$result = $stmt->fetchAll();
+
+	echo 'rows: ' . $rows;
+	if ($rows > 0) {
+		$balada = $result['balada'];
+		$_SESSION['user-logged'] =  $user;
+		if ($balada == "sim") {
+			$_SESSION['balada'] = true; 
 			return true;
 		}
-
+		return true;
 	}
 	return false;
-
 } 
 
 function is_logged() {
