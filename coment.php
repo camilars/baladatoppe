@@ -13,7 +13,7 @@ if (is_logged()) {
 
 	$texto = $_POST['texto'];
 	echo $user_id . '<br>';
-	$sql = "INSERT INTO cometario(texto, usuarios_id) VALUES (:texto, :usuarios_id)";
+	$sql = "INSERT INTO comentarios(texto, usuarios_id) VALUES (:texto, :usuarios_id)";
 	$consulta=$conn->prepare($sql);
 	$consulta->bindParam(':texto', $texto);
 	$consulta->bindParam(':usuarios_id', $user_id);
@@ -23,6 +23,7 @@ if (is_logged()) {
 		header('location:index-login.php');
 	} else {
 		echo 'erro ao salvar';
+		// echo ''
 	}
 
 }

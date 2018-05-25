@@ -29,7 +29,7 @@
 
     </div>
   </label>
-  <h1>Não encontrou sua balada favorita? <a href="form_cadastro.php">Cadastre-se</a></h1>
+  <h1>Não encontrou sua balada favorita? <a href="crud/form_cadastro.php">Cadastre-se</a></h1>
 </div>
 <div style="background-color: white; width: 40%;height: 25%; display: block;">
   

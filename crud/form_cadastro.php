@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include '../header.php';?>
 <form  action="add_usuario.php" id="form_cadastro" method="POST">
     <link rel="stylesheet" type="text/css" href="cadastro.css">
     <div class="container text-center"><!-- formlário cadastro -->
@@ -68,4 +68,4 @@
     });
 
 </script>
-<?php include "rodape.php" ; ?>
+<?php include "../rodape.php" ; ?>

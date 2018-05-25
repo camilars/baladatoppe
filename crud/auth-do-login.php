@@ -18,7 +18,7 @@ if ($consulta->rowCount() >= 1) {
 	if ($balada == "sim") {
 		$_SESSION['balada'] = true; 
 	}
-	header('location:./index-login.php');
+	header('location:../index-login.php');
 }else{
 	header('location:login.php');
 }

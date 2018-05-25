@@ -52,12 +52,12 @@
           </li>
           <!--  tag li para ir no mapa -->
           <li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
-          <li><a href="form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
+          <li><a href="crud/form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
           <?php if (is_logged()): ?>
             <li><a href="index-login.php"><?= strtoupper($_SESSION['user-logged'])?></a></li>
-            <li><a href="logout.php">LOGOUT <i class="fas fa-sign-out-alt"></i></a></li>
+            <li><a href="crud/logout.php">LOGOUT <i class="fas fa-sign-out-alt"></i></a></li>
           <?php else: ?>
-            <li><a href="login.php">LOGIN <i class="fas fa-user"></i></a></li>
+            <li><a href="crud/login.php">LOGIN <i class="fas fa-user"></i></a></li>
           <?php endif ?> 
           <li></li>
         </ul>
