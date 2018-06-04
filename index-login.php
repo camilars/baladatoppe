@@ -46,7 +46,7 @@
              	}
 
              	body{
-             		background:url('abalada.jpg') no-repeat;
+             		background:url('css/abalada.jpg') no-repeat;
              		background-size: cover;
              		background-attachment: fixed;
              	}
@@ -113,8 +113,9 @@
                       .sidenav a {font-size: 18px;}
                     }
                   </style>
-                </head><link rel="stylesheet" type="text/css" href="cssteste.css">
+                </head>
 
+                <link rel="stylesheet" type="text/css" href="cssteste.css">
 
                 <span style=  "position: absolute; left: 1900px;margin-right: -50%;font-size:30px;cursor:pointer" onclick="openNav() ">&#9776; </span>
 

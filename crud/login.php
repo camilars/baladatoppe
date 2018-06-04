@@ -1,17 +1,18 @@
+<?php
+include "../header.php";
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
-include "../header.php";
-
-  ?> 
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 	<div class="Cadastro">
-		<form method="POST" action="auth-do-login.php">
+		<form method="POST" action="crud/auth-do-login.php">
 
 			<span class="fontawesome-user"></span><input type="text" name="usuario" required placeholder="Login" autocomplete="off"> 
 			<span class="fontawesome-lock"></span><input type="password" name="senha" id="senha" required placeholder="Senha" autocomplete="off"> 

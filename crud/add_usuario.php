@@ -1,7 +1,7 @@
 <?php
 // ob_start();
-include"../conexao.php";
-include_once "../init-login.php";
+include"conexao.php";
+include_once "init-login.php";
 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];

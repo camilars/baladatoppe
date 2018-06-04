@@ -3,7 +3,7 @@
 include 'init-login.php';
 
 if (is_logged()) {
-	echo 'entrou<br>';# code...
+	echo 'entrou<br>';
 
 	$user = $_SESSION['user-logged'];
 	$consult = $conn->prepare("select id from usuarios where usuario = '$user'");
@@ -22,8 +22,8 @@ if (is_logged()) {
 	if ($res) {
 		header('location:index-login.php');
 	} else {
-		echo 'erro ao salvar';
-		// echo ''
+		header('location:index-login.php');
+		
 	}
 
 }
