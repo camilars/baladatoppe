@@ -69,6 +69,7 @@
            </head>
            <body >
 
+                     <meta name="viewport" content="width=device-width, initial-scale=1">
                      <style>
                      body {
                       font-family: "Lato", sans-serif;
@@ -113,11 +114,10 @@
                       .sidenav a {font-size: 18px;}
                     }
                   </style>
-                </head>
+                </head><link rel="stylesheet" type="text/css" href="cssteste.css">
 
-                <link rel="stylesheet" type="text/css" href="cssteste.css">
 
-                <span style=  "position: absolute; left: 1900px;margin-right: -50%;font-size:30px;cursor:pointer" onclick="openNav() ">&#9776; </span>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
                 <div id="mySidenav" class="sidenav">
                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -138,7 +138,6 @@
                   document.getElementById("mySidenav").style.width = "0";
                 }
               </script>
-
 
 
 
