@@ -8,14 +8,14 @@
     <base href="http://localhost/baladatoppe/">
   <?php endif ?>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"></script>
   <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -97,7 +97,8 @@
                       .sidenav a {font-size: 18px;}
                     }
                   </style>
-                </head><link rel="stylesheet" type="text/css" href="cssteste.css">
+                </head>
+                <!-- <link rel="stylesheet" type="text/css" href="cssteste.css"> -->
 
 
                 <?php if (is_logged()): ?>
