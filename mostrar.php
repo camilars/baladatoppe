@@ -45,7 +45,8 @@ $baladas = file('baladas.csv');
 <li style="margin-top: 4%;color:white
 ;"> <?php 	echo '<h2>'.$balada.'</h2>'; ?> </li>
 <?php endforeach ?>
-<a href="carregar.php"><h2 style="margin-left: 40%; margin-top: -550px;">Cadastrar outra balada</h2></a>
+<a href="carregar.php" style="margin-left: 40%; margin-top: -550px;" class="btn btn-primary">Cadastrar outra balada</a>
+
 
 </body>
 </html>	
