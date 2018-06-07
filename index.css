@@ -187,6 +187,7 @@ textarea {
 p{
   font-style: italic;
   text-align: center;
+<<<<<<< HEAD
 }
 body {
                   font-family: "Lato", sans-serif;
@@ -251,3 +252,6 @@ body {
                           }
                           
   /*----;*/
+=======
+}
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85

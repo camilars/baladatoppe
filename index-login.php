@@ -6,6 +6,7 @@
              <html lang="en">
              <head>
              	<title>Balada Top </title>
+<<<<<<< HEAD
              	<link rel="stylesheet" type="text/css" href="css/index_login.css">
 
              </head>
@@ -40,12 +41,160 @@
 
 <div id="map"></div>
 
+=======
+             	<style>
+             		#map {
+             			height: 50%;
+             			width: 40%;
+             			margin-top:30px ;
+             			border-radius: 20px 20px;
+
+             		}
+             		embed {
+             			margin: 0;
+             			padding: 0;
+             			height: 50px;
+             		}
+             		.header{
+             			font-size: 40px;
+             			padding: 2px 2px;
+             			text-align: center;
+             			background-color: grey;
+             			color:#000000;
+
+             		}
+             		html, body {
+             			height: 100%;
+             			/*margin: 0;*/
+             			/*padding: 0;*/
+             			width:100%;
+             		}
+
+             		body{
+             			background:url('css/abalada.jpg') no-repeat;
+             			background-size: cover;
+             			background-attachment: fixed;
+             		}
+
+
+
+             		#comment-container {
+             			max-height: 230px;
+             			position: absolute;
+             			left:1300px;
+             			top:160px;
+             			background-color:white;
+             		}
+             		#comments {
+             			left:1300px;
+             			top:160px;
+             		}
+             	</style>
+
+             </head>
+             <body >
+
+             	<meta name="viewport" content="width=device-width, initial-scale=1">
+             	<style>
+             		body {
+             			font-family: "Lato", sans-serif;
+             		}
+
+             		.sidenav {
+             			height: 100%;
+             			width: 0;
+             			position: fixed;
+             			z-index: 1;
+             			top: 0;
+             			right: 0;
+             			background-color: #111;
+             			overflow-x: hidden;
+             			transition: 0.5s;
+             			padding-top: 60px;
+             		}
+
+             		.sidenav a {
+             			padding: 8px 8px 8px 32px;
+             			text-decoration: none;
+             			font-size: 25px;
+             			color: #818181;
+             			display: block;
+             			transition: 0.3s;
+             		}
+
+             		.sidenav a:hover {
+             			color: #f1f1f1;
+             		}
+
+             		.sidenav .closebtn {
+             			position: absolute;
+             			top: 0;
+             			right: 25px;
+             			font-size: 36px;
+             			margin-left: 50px;
+             		}
+
+             		@media screen and (max-height: 450px) {
+             			.sidenav {padding-top: 15px;}
+             			.sidenav a {font-size: 18px;}
+             		}
+             	</style>
+             </head>
+             <!-- <link rel="stylesheet" type="text/css" href="cssteste.css"> -->
+
+
+             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+             <div id="mySidenav" class="sidenav">
+             	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             	<a href="#" data-toggle="modal" data-target="#editModal" >Editar conta</a>
+             	<?php if (balada()): ?>
+             		<a href="#">baladas da semana</a>
+             		<a href="carregar.php">Cadastrar baladas</a> 
+             	<?php endif ?>
+             	<a href="logout.php">Sair</a>
+             </div>
+
+             <script>
+             	function openNav() {
+             		document.getElementById("mySidenav").style.width = "250px";
+             	}
+
+             	function closeNav() {
+             		document.getElementById("mySidenav").style.width = "0";
+             	}
+             </script>
+
+
+
+         </ul>
+     </div>
+ </div>
+</nav>
+
+<br>
+<br>
+
+<div id="map"></div>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xE7a7Pi92cA69kmk-zwtGg5M9l0N2Ag&callback=initMap">
+</script>
+
+
+
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 <div id="rolamento">
 
 
 	<label> <div class="w3-container w3-white">
 		<h2 style=" position: absolute;top: 50px; left: 1000px; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
 
+<<<<<<< HEAD
+=======
+		<td>
+
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 		</div>
 		<div class="dropdown" style="position: absolute; left:1000px; top:120px;">
 			<a class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#">Visualizar <span class="caret"></span></a>
@@ -58,15 +207,35 @@
 					<option value="Winner">Winner</option>
 					<option value="Liverpool">Liverpool</option>
 				</select>
+<<<<<<< HEAD
 				
 			</form>
 			</ul>
 		</div>
 
+=======
+				<!-- <li><a href="index-login.php?barb=Uk Pub">UK</a></li>
+				<li><a href="index-login.php?barb=Manny Deck">Manny Deck</a></li>
+				<li><a href="index-login.php?barb=Winner">Winner</a></li>
+				<li><a href="index-login.php?barb=Liverpool">Liverpool</a></li> -->
+			</form>
+				<!-- <li><a href="index-login.php?barb=NOX">NOX</a></li>  -->
+			</ul>
+		</div>
+
+	</div>
+</label> 
+</div>
+<div style="background-color: white; width: 40%;height: 13%;">
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 
 	<?php
 	if (isset ($_POST['balada'])) {
 		$balada = $_POST['balada'];
+<<<<<<< HEAD
+=======
+		// $sql= "SELECT * FROM baladas WHERE balada='$balada'";
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 		$sql = "SELECT * FROM `baladas` WHERE `balada` ='" . $balada . "'";
 		$result = $conn->query($sql);
 	    foreach ($result as $row) {
@@ -78,16 +247,57 @@
 	        echo $row['horario'] . "<br>";
 	    }
 
+<<<<<<< HEAD
 		unset($_POST['balada']);
 		
+=======
+		/*print_r($result);
+		echo "Entrou<br>";*/
+		unset($_POST['balada']);
+		/*while ($result = $consulta->fetch(PDO::FETCH_ASSOC)) {
+			echo $result['balada'] . '<br>';
+			echo $result['endereco'] . '<br>';
+			echo $result['telefone'] . '<br>';
+		}*/
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 }
 ?>
 
 </div>
 
+<<<<<<< HEAD
+=======
+<title></title>
+<style type="text/css">
+	li{
+		color: black;
+	}
+</style>
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<<<<<<< HEAD
 	
+=======
+	<?php
+
+												$data = file('usuarios.csv'); // lê o arquivo para um array
+												// $usuarios = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
+												$dados_usuarios = explode(',', $data); // pega os dados do livro e coloca no array $dados_livro
+												$name = $_SESSION['user-logged'];
+
+												foreach ($data as $user) {
+													$user = trim($user);
+													$arr = explode(',', $user);
+													if ($arr[0] == $name) {
+														$senha = $arr[1];
+														$balada = $arr[2];
+														break;
+													}
+												}
+
+												?>
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 												<div class="modal-dialog" role="document" >
 													<div class="modal-content">
 														<div class="modal-header">
@@ -158,7 +368,15 @@
 														width: 40%;
 													}
 												</style>
+<<<<<<< HEAD
 												
+=======
+												<div id="map"></div>
+												<!-- Replace the value of the key parameter with your own API key. -->
+												<script async defer
+												src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+											</script> 
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
 											<script>
 												function initMap() {
 
@@ -196,6 +414,17 @@
 											</script>
 											<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 											async defer></script>
+<<<<<<< HEAD
 <div style="background-color: white; width: 40%;height: 13%; margin-top: -125px;"></div>
 		</body>
 	</html>
+=======
+
+										</body>
+
+
+
+										</html>
+
+										<?php include "../rodape.php";?>
+>>>>>>> c523e988b4d4d41b657cdbb0a6b75192e46dae85
