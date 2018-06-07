@@ -233,20 +233,20 @@
 
 	<?php
 
-												$data = file('usuarios.csv'); // lê o arquivo para um array
-												// $usuarios = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
-												$dados_usuarios = explode(',', $data); // pega os dados do livro e coloca no array $dados_livro
-												$name = $_SESSION['user-logged'];
+												// $data = file('usuarios.csv'); // lê o arquivo para um array
+												// // $usuarios = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
+												// $dados_usuarios = explode(',', $data); // pega os dados do livro e coloca no array $dados_livro
+												// $name = $_SESSION['user-logged'];
 
-												foreach ($data as $user) {
-													$user = trim($user);
-													$arr = explode(',', $user);
-													if ($arr[0] == $name) {
-														$senha = $arr[1];
-														$balada = $arr[2];
-														break;
-													}
-												}
+												// foreach ($data as $user) {
+												// 	$user = trim($user);
+												// 	$arr = explode(',', $user);
+												// 	if ($arr[0] == $name) {
+												// 		$senha = $arr[1];
+												// 		$balada = $arr[2];
+												// 		break;
+												// 	}
+												// }
 
 												?>
 												<div class="modal-dialog" role="document" >
@@ -258,14 +258,14 @@
 															</button>
 														</div>
 														<div class="modal-body">
-															<form action="update.php" method="POST">
+															<form action="crud/update.php" method="POST">
 																<div class="form-group">
 																	<label for="name">Name:</label>
-																	<input type="text" name="user" class="form-control" value="<?=$name?>">
+																	<input type="text" name="user" class="form-control" value="<?=$_SESSION['user-logged']?>">
 																</div>
 																<div class="form-group">
 																	<label for="pass">Password:</label>
-																	<input type="password" name="password" class="form-control" value="<?=$senha?>">
+																	<input type="password" name="password" class="form-control" value="*****">
 																</div>
 																<div class="form-group">
 																	<input type="hidden" name="balada" value="<?= $balada?>">

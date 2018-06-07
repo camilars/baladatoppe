@@ -1,6 +1,6 @@
 <?php
 
-include_once '../init-login.php';
+include_once 'init-login.php';
 
 logout();
 
