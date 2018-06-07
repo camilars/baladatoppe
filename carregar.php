@@ -1,5 +1,6 @@
 <?php
-session_start();
+include "header.php";
+
 if (!isset($_SESSION['user'])) {
 	$_SESSION['user'] = $_SESSION['user-logged'];
 }
@@ -7,16 +8,28 @@ if (!isset($_SESSION['user'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="css/carregar.css">
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
-	<form method="POST" enctype="multipart/form-data" action="add_balada.php">
-	 selecione imagem:
-	<input type="file" name="arquivo"><br/>
-	<input type="text" name="balada" placeholder="Nome da balada">
-	<input type="submit">	
+<div class="container">
+	
+	<form method="POST" enctype="multipart/form-data" action="add_balada.php" id="formulario">
+	 <h1>selecione imagem:</h1>
+	 <div class="col-md-6">
+	<input type="file" class="form-control" name="arquivo"><br/>
+	<input type="text" class="form-control" name="balada" placeholder="Nome da balada">
+	 </div>
+	 <div class="col-md-12"><br>
+	<input type="submit" class="btn btn-primary">	
+	 </div>
 	</form>
+</div>
 	
 </body>
 </html>
+<?php 
+include "rodape.php";
+
+ ?>

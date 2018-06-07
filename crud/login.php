@@ -20,7 +20,7 @@ include "../header.php";
 		<!-- /form -->
 
                 Ainda não é cadastrado?<br>
-                <a href="form_cadastro.php" class="forgot-password"> Cadastre-se! </a>
+                <a href="crud/form_cadastro.php" class="forgot-password"> Cadastre-se! </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
 	</div>

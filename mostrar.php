@@ -1,5 +1,6 @@
 <?php  
-session_start();
+include "header.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +18,23 @@ session_start();
 	
 <?php if(isset ($_SESSION['upload'])&& $_SESSION['upload']){
 ?>
-<img id="balada_image" src="imagem/<?=$_SESSION['image']?>">
+<?php 
+$pasta = "imagem/";
+
+if (is_dir($pasta)){
+	$diretorio = dir($pasta);
+	echo '<div class="container">';
+	while (($arquivo = $diretorio -> read())!== false) {
+		if ($arquivo != '.' && $arquivo != '..')
+			echo "<img width='120' height='70' src ='" .$pasta.$arquivo. "'><br/>";
+	}
+	$diretorio -> close();
+}else{
+	echo"A pasta não existe";
+}
+
+ ?>
+ </div>
 <?php
 	} ?>
  
@@ -25,9 +42,13 @@ session_start();
 $baladas = file('baladas.csv');
 ?>
 <?php foreach ($baladas as $balada) : ?>
-<li> <?php 	echo $balada; ?> </li>
+<li style="margin-top: 4%;color:white
+;"> <?php 	echo '<h2>'.$balada.'</h2>'; ?> </li>
 <?php endforeach ?>
-<a href="carregar.php">Cadastrar outra balada</a>
+<a href="carregar.php"><h2 style="margin-left: 40%; margin-top: -550px;">Cadastrar outra balada</h2></a>
 
 </body>
 </html>	
+<?php 
+include "rodape.php";
+ ?>
