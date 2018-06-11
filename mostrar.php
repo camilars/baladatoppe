@@ -38,15 +38,12 @@ if (is_dir($pasta)){
 <?php
 	} ?>
  
-<?php
-$baladas = file('baladas.csv');
-?>
-<?php foreach ($baladas as $balada) : ?>
+
 <li style="margin-top: 4%;color:white
 ;"> <?php 	echo '<h2>'.$balada.'</h2>'; ?> </li>
-<?php endforeach ?>
+<?php if (balada()): ?>
 <a href="carregar.php" style="margin-left: 40%; margin-top: -550px;" class="btn btn-primary">Cadastrar outra balada</a>
-
+   <?php endif ?>
 
 </body>
 </html>	

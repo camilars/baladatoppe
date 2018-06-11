@@ -22,9 +22,9 @@
              	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
              	<a href="#" data-toggle="modal" data-target="#editModal" >Editar conta</a>
              	<?php if (balada()): ?>
-             		<a href="#">baladas da semana</a>
              		<a href="carregar.php">Cadastrar baladas</a> 
              	<?php endif ?>
+             		<a href="mostrar.php">baladas da semana</a>
              	<a href="logout.php">Sair</a>
              </div>
 
@@ -41,129 +41,21 @@
 
 <div id="map"></div>
 
-
-             	<style>
-             		#map {
-             			height: 50%;
-             			width: 40%;
-             			margin-top:30px ;
-             			border-radius: 20px 20px;
-
-             		}
-             		embed {
-             			margin: 0;
-             			padding: 0;
-             			height: 50px;
-             		}
-             		.header{
-             			font-size: 40px;
-             			padding: 2px 2px;
-             			text-align: center;
-             			background-color: grey;
-             			color:#000000;
-
-             		}
-             		html, body {
-             			height: 100%;
-             			/*margin: 0;*/
-             			/*padding: 0;*/
-             			width:100%;
-             		}
-
-             		body{
-             			background:url('css/abalada.jpg') no-repeat;
-             			background-size: cover;
-             			background-attachment: fixed;
-             		}
-
-
-
-             		#comment-container {
-             			max-height: 230px;
-             			position: absolute;
-             			left:1300px;
-             			top:160px;
-             			background-color:white;
-             		}
-             		#comments {
-             			left:1300px;
-             			top:160px;
-             		}
-             	</style>
-
              </head>
              <body >
 
              	<meta name="viewport" content="width=device-width, initial-scale=1">
-             	<style>
-             		body {
-             			font-family: "Lato", sans-serif;
-             		}
-
-             		.sidenav {
-             			height: 100%;
-             			width: 0;
-             			position: fixed;
-             			z-index: 1;
-             			top: 0;
-             			right: 0;
-             			background-color: #111;
-             			overflow-x: hidden;
-             			transition: 0.5s;
-             			padding-top: 60px;
-             		}
-
-             		.sidenav a {
-             			padding: 8px 8px 8px 32px;
-             			text-decoration: none;
-             			font-size: 25px;
-             			color: #818181;
-             			display: block;
-             			transition: 0.3s;
-             		}
-
-             		.sidenav a:hover {
-             			color: #f1f1f1;
-             		}
-
-             		.sidenav .closebtn {
-             			position: absolute;
-             			top: 0;
-             			right: 25px;
-             			font-size: 36px;
-             			margin-left: 50px;
-             		}
-
-             		@media screen and (max-height: 450px) {
-             			.sidenav {padding-top: 15px;}
-             			.sidenav a {font-size: 18px;}
-             		}
-             	</style>
+             	
              </head>
-      
 
-
-         </ul>
-     </div>
- </div>
 </nav>
-
-<br>
-<br>
-
-
-
-
 
 <div id="rolamento">
 
 
 	<label> <div class="w3-container w3-white">
 		<h2 style=" position: absolute;top: 50px; left: 1000px; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
-
-
-
-		<td>
+	<td>
 
 		</div>
 		<div class="dropdown" style="position: absolute; left:1000px; top:120px;">
@@ -178,19 +70,13 @@
 					<option value="Liverpool">Liverpool</option>
 				</select>
 
-				
 			</form>
 			</ul>
 		</div>
 
-
-				
+			
 			</form>
-				
-			</ul>
-		</div>
 
-	</div>
 </label> 
 </div>
 <div style="background-color: white; width: 40%;height: 13%;">
@@ -199,8 +85,6 @@
 	if (isset ($_POST['balada'])) {
 		$balada = $_POST['balada'];
 
-
-		// $sql= "SELECT * FROM baladas WHERE balada='$balada'";
 		$sql = "SELECT * FROM `baladas` WHERE `balada` ='" . $balada . "'";
 		$result = $conn->query($sql);
 	    foreach ($result as $row) {
@@ -215,40 +99,11 @@
 
 }
 ?>
-
 </div>
-
-
-
-<title></title>
-<style type="text/css">
-	li{
-		color: black;
-	}
-</style>
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
 
 	
-
-	<?php
-
-												// $data = file('usuarios.csv'); // lê o arquivo para um array
-												// // $usuarios = trim($data[$linha]); // pega a linha específica do array e coloca em $livro
-												// $dados_usuarios = explode(',', $data); // pega os dados do livro e coloca no array $dados_livro
-												// $name = $_SESSION['user-logged'];
-
-												// foreach ($data as $user) {
-												// 	$user = trim($user);
-												// 	$arr = explode(',', $user);
-												// 	if ($arr[0] == $name) {
-												// 		$senha = $arr[1];
-												// 		$balada = $arr[2];
-												// 		break;
-												// 	}
-												// }
-
-												?>
 												<div class="modal-dialog" role="document" >
 													<div class="modal-content">
 														<div class="modal-header">
@@ -277,7 +132,7 @@
 													</div>
 												</div>
 											</div> <!-- <Modal Login > -->
-											<div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
+											<div id="comment-container"  style ="display: block; background-color: transparent; border:1px white; height: 250px; width: 550px;">
 												<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
 												<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
 
@@ -301,7 +156,7 @@
 											</div>
 											<form method="POST" action="coment.php">
 												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
-												<input type="submit" value="Enviar" style="position: absolute; left:1800px; top:415px;"">
+												<input class="btn btn-success" type="submit" name ="enviar" style="top:410px; position: absolute; left:1820px;">
 
 											</form>
 											<style>
@@ -365,9 +220,4 @@
 		</body>
 	</html>
 
-
-
-
-
-										
 

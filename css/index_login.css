@@ -1,3 +1,9 @@
+                        body{
+                             background-image: url("abalada.jpg");
+                              background-size: cover;
+                              background-attachment: fixed;
+                              font-family: "Lato", sans-serif;
+                        }
 #map {
                               height: 50%;
                               width: 40%;
@@ -25,12 +31,6 @@
                               width:100%;
                         }
 
-                        body{
-                              background:url('abalada.jpg') no-repeat;
-                              background-size: cover;
-                              background-attachment: fixed;
-                              font-family: "Lato", sans-serif;
-                        }
 
 
 
