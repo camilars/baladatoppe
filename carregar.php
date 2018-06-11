@@ -16,10 +16,9 @@ if (!isset($_SESSION['user'])) {
 <div class="container">
 	
 	<form method="POST" enctype="multipart/form-data" action="add_balada.php" id="formulario">
-	 <h1>selecione imagem:</h1>
+	 <h1 style="color: white;">selecione imagem:</h1>
 	 <div class="col-md-6">
-	<input type="file" class="form-control" name="arquivo"><br/>
-	<input type="text" class="form-control" name="balada" placeholder="Nome da balada">
+	<input type="file" class="form-control" name="arquivo" required><br/>
 	 </div>
 	 <div class="col-md-12"><br>
 	<input type="submit" class="btn btn-primary">	

@@ -16,7 +16,7 @@
         <img src="imagens/imag5.jpg"  style="  width:12000px; height:1050px;">
         <div class="carousel-caption">
           <h2>Quer conheçer as melhores baladas e participar de PROMOÇÕES?</h2>
-          <a href="form_cadastro.php" class="btn btn-danger" role="button">CADASTRE-SE</a>
+          <a href="crud/form_cadastro.php" class="btn btn-danger" role="button">CADASTRE-SE</a>
         </div>      
       </div>
 

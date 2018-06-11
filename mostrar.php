@@ -39,8 +39,7 @@ if (is_dir($pasta)){
 	} ?>
  
 
-<li style="margin-top: 4%;color:white
-;"> <?php 	echo '<h2>'.$balada.'</h2>'; ?> </li>
+<!-- <li style="margin-top: 4%;color:white;"> <?php 	echo $balada; ?> </li> -->
 <?php if (balada()): ?>
 <a href="carregar.php" style="margin-left: 40%; margin-top: -550px;" class="btn btn-primary">Cadastrar outra balada</a>
    <?php endif ?>
