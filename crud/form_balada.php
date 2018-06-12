@@ -14,7 +14,7 @@ include "../header.php";
 				
 				
 
-				<form method="POST" action="cadastar_balada.php">
+				<form action="crud/cadastrar_balada.php" method="POST">
 					<div class="form-control">
 						Balada <input type="text" name="balada">
 					</div>	
