@@ -107,7 +107,8 @@
                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                  <a href="#" data-toggle="modal" data-target="#editModal" >Alterar conta</a>
                  <?php if (balada()): ?>
-                   <a href="carregar.php">Cadastrar baladas</a> 
+                   <a href="carregar.php">Cadastrar folder</a> 
+                   <a href="crud/form_balada.php">Cadastrar baladas</a>
                  <?php endif ?>
                   <a href="mostrar.php">baladas da semana</a>
                  <a href="crud/logout.php">Sair</a>

@@ -1,5 +1,5 @@
-body{
-	background-image: url("abalada.jpeg");
+ body{
+	background-image: url("abalada.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	text-align: center;
@@ -10,6 +10,7 @@ body{
 
 [class*="fontawesome-"]:before {
 	font-family: 'FontAwesome', sans-serif;
+	
 }
 
 input {
