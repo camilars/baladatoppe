@@ -45,16 +45,14 @@
              <body >
 
              	<meta name="viewport" content="width=device-width, initial-scale=1">
-             	
              </head>
-
 </nav>
 
 <div id="rolamento">
 
 
 	<label> <div class="w3-container w3-white">
-		<h2 style=" position: absolute;top: 50px; left: 1000px; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
+		<h2 style=" position: absolute;top: 50px; left: 1000px; color: white; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
 	<td>
 
 		</div>
@@ -62,7 +60,9 @@
 			<a class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#">Visualizar <span class="caret"></span></a>
 			<ul class="dropdown-menu">
 			<form action="index-login.php" method="POST" name="meuForm">
+			
 				<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
+
 					<option value="default">Selecione</option>
 					<option value="Uk Pub">UK</option>
 					<option value="Manny Deck">Manny Deck</option>
@@ -147,7 +147,7 @@
 														$consulta = $conn->prepare("select usuario from usuarios where id = '$user'");
 														$consulta->execute();
 														$res = $consulta->fetch(PDO::FETCH_ASSOC);
-														echo "<p><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
+														echo "<p style='color:white'><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
 														$i++;
 													}
 
@@ -155,14 +155,14 @@
 												</div>
 											</div>
 											<form method="POST" action="coment.php">
-												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: transparent; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
+												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="   height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: white; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
 												<input class="btn btn-success" type="submit" name ="enviar" style="top:410px; position: absolute; left:1820px;">
 
 											</form>
 											<style>
 												#comentarios::-webkit-input-placeholder{
 													color:#C4C;
-													background-color: #4C4;
+													background-color: white;
 													text-transform: uppercase;
 													font-style: bold;
 												</style>

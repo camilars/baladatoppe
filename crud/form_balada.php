@@ -8,40 +8,62 @@ include "../header.php";
 	<title>Cadastrar balada</title>
 </head>
 <body>
-	<div class="container text-center">
-		<div class="form-row">
-			<div class="col-md-6">
-				
-				
 
-				<form action="crud/cadastrar_balada.php" method="POST">
-					<div class="form-control">
-						Balada <input type="text" name="balada">
-					</div>	
-					<div class="form-control">
-						endereço<input type="text" name="endereco">
-					</div>
-					<div class="form-control">
-						telefone<input type="text" name="telefone">
-					</div>
-					<div class="form-control">
-						Link<input type="text" name="link">
-					</div>
-					<div class="form-control">
-						descrição<input type="text" name="descricao" >
-					</div>
-					<div class="form-control">
-						Horario<input type="time" name="horario">
-					</div>
-					<div class="form-control">
-						<input class="btn btn-success" type="submit" name="salvar" value="Salvar">	
-					</div>	
-				</div>
-			</div>
-		</form>
-	</div>
 </body>
 </html>
+<div class="container" id="corpo">
+
+  <h2 class="pagm">Cadastro da Balada</h2>
+    <form class="form-horizontal" action="crud/cadastrar_balada.php" method="POST">
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="balada">Balada:</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control"  placeholder="Nome da Balada" name="balada"required>
+        </div>
+      </div>
+      
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="endereco">Endereço</label>
+        <div class="col-sm-3">          
+          <input type="text" class="form-control"  placeholder="Endereço" name="endereco" required>
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="telefone">Telefone</label>
+        <div class="col-sm-3">          
+          <input type="text" class="form-control"  placeholder="(81)4002-8922" name="telefone" required>
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="link">Link</label>
+        <div class="col-sm-3">          
+          <input type="text" class="form-control"  placeholder="Link (Facebook ou proprio site)" name="link" required>
+         
+          
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="descricao">Descrição</label>
+        <div class="col-sm-3">          
+          <input type="text" class="form-control"  placeholder="Descrição" name="descricao" required>>
+        </div>
+      </div>
+      <div class="form-group" >
+        <label class="control-label col-sm-1" for="horario">Horário</label>
+        <div class="col-sm-2">          
+          <input type="time" class="form-control"  name="horario" required>>
+        </div>
+        </div>
+        <label class="control-label col-sm-4" </label>
+		<input class="btn btn-success" type="submit" name="salvar" value="Salvar">	
+					
+      </div>
+
+
+
 
 <?php 
 include "../rodape.php"
