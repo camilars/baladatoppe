@@ -36,8 +36,8 @@
             </div>
         </div>
     </div>
-    <div class="button" align="center">
-        <div class="col-md-5">
+    <div class="col-md-7" align="center">
+        <div class="col-md-1">
             <button style=" position: absolute;  top:6px; left:580px;" type="submit" class="btn btn-primary">Enviar</button>
         </div>
     </div>

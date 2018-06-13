@@ -64,10 +64,14 @@
 				<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
 
 					<option value="default">Selecione</option>
-					<option value="Uk Pub">UK</option>
-					<option value="Manny Deck">Manny Deck</option>
-					<option value="Winner">Winner</option>
-					<option value="Liverpool">Liverpool</option>
+					<option value="balada" id = "balad">
+					<?php 
+						$sql='SELECT * FROM baladas';
+						$result = $conn->query($sql);
+						foreach ($result as $sql) {
+							echo "<option value = '$sql[1]' >" .$sql[1]. "</option>";
+						}
+						?>
 				</select>
 
 			</form>
