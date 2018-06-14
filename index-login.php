@@ -15,28 +15,8 @@
              	<meta name="viewport" content="width=device-width, initial-scale=1">
              	<link rel="stylesheet" type="text/css" href="css/index_login.css">
              </head>
-
-             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-             <div id="mySidenav" class="sidenav">
-             	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-             	<a href="#" data-toggle="modal" data-target="#editModal" >Editar conta</a>
-             	<?php if (balada()): ?>
-             		<a href="carregar.php">Cadastrar baladas</a> 
-             	<?php endif ?>
-             		<a href="mostrar.php">baladas da semana</a>
-             	<a href="logout.php">Sair</a>
-             </div>
-
-             <script>
-             	function openNav() {
-             		document.getElementById("mySidenav").style.width = "250px";
-             	}
-
-             	function closeNav() {
-             		document.getElementById("mySidenav").style.width = "0";
-             	}
-             </script>
+             <br>
+             <br>
 
 
 <div id="map"></div>
@@ -53,13 +33,12 @@
 
 	<label> <div class="w3-container w3-white">
 		<h2 style=" position: absolute;top: 50px; left: 1000px; color: white; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
-	<td>
 
 		</div>
-		<div class="dropdown" style="position: absolute; left:1000px; top:120px;">
+		<!-- <div class="dropdown" style="position: absolute; left:1000px; top:120px;">
 			<a class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#">Visualizar <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			<form action="index-login.php" method="POST" name="meuForm">
+			<ul class="dropdown-menu"> -->
+			<form  style="position: absolute; left:1000px; top:120px;action="index-login.php" method="POST" name="meuForm">
 			
 				<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
 
@@ -75,14 +54,14 @@
 				</select>
 
 			</form>
-			</ul>
+			<!-- </ul>
 		</div>
 
-			
+			 -->
 			</form>
 
 </label> 
-</div>
+<!-- </div> -->
 <div style="background-color: white; width: 40%;height: 13%;">
 
 	<?php
@@ -160,29 +139,11 @@
 											</div>
 											<form method="POST" action="coment.php">
 												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="   height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: white; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
+												 <input type="hidden" id="custId" name="balada" value="$sql[1]">
 												<input class="btn btn-success" type="submit" name ="enviar" style="top:410px; position: absolute; left:1820px;">
-
+												
 											</form>
-											<style>
-												#comentarios::-webkit-input-placeholder{
-													color:#C4C;
-													background-color: white;
-													text-transform: uppercase;
-													font-style: bold;
-												</style>
-
-
-												<style >
-													#map {
-														height: 600px;
-														width: 40%;
-													}
-												</style>
-
-												
-
-												
-											 
+			 
 											<script>
 												function initMap() {
 

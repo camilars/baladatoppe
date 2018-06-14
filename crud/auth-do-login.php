@@ -11,12 +11,16 @@ $consulta->bindParam(2,$senha);
 $consulta->execute();
 $result = $consulta->fetchAll();
 $balada = $result[0]['balada'];
+$role = $result[0]['role'];
 
 if ($consulta->rowCount() >= 1) {
 	echo 'balada: ' . $balada . '<br>';
 	$_SESSION['user-logged'] =  $usuario;
 	if ($balada == "sim") {
 		$_SESSION['balada'] = true; 
+	}
+	if ($role == "adm") {
+		$_SESSION['adm'] = true; 
 	}
 	header('location:../index-login.php');
 }else{

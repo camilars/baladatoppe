@@ -1,9 +1,9 @@
 <?php
 include "header.php";
 
-if (!isset($_SESSION['user'])) {
-	$_SESSION['user'] = $_SESSION['user-logged'];
-}
+// if (!isset($_SESSION['user'])) {
+// 	$_SESSION['user'] = $_SESSION['user-logged'];
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,0 +1,38 @@
+div#position{
+	margin-left: 30%;
+	margin-top: 10%;
+}
+div#lista{
+	width: inherit; 
+	height: 160px; 
+	overflow-y: scroll; 
+	background-color: transparent;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	border: 6px solid white;
+}
+div#box{
+	margin-top: 50px;
+	display: block; 
+	background-color: transparent; 
+	border:1px white; 
+	height: 250px; 
+	width: 550px;
+}
+div#user{
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 20px;
+	position: absolute;
+	color: white;
+}
+div#balada{
+	margin-top: 50px;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-size: 20px;
+	position: relative;
+	color: white; 
+}

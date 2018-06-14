@@ -29,6 +29,9 @@ function is_logged() {
 function balada() {
 	return isset($_SESSION['balada']);
 }
+function is_admin(){
+	return isset($_SESSION['adm']);
+}
 function logout() {
 	unset($_SESSION['user-logged']);
 	if (isset($_SESSION['balada'])) {

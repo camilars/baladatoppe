@@ -1,4 +1,11 @@
-<?php require_once 'init-login.php' ?>
+<?php 
+require_once 'init-login.php';
+
+if (!isset($_SESSION['admin'])){
+  $_SESSION['admin'] = true;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +50,10 @@
           </li>
           <!--  tag li para ir no mapa -->
           <li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
+          
+
           <li><a href="crud/form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
+       
           <?php if (is_logged()): ?>
             <li><a href="index-login.php"><?= strtoupper($_SESSION['user-logged'])?></a></li>
             <li><a href="crud/logout.php">LOGOUT <i class="fas fa-sign-out-alt"></i></a></li>
@@ -59,7 +69,7 @@
                     .sidenav {
                       height: 100%;
                       width: 0;
-                      position: absolute;
+                    /*  position: absolute;*/
                       z-index: 1;
                       top: 0;
                       right: 0;
@@ -84,7 +94,7 @@
                     }
 
                     .sidenav .closebtn {
-                      position: absolute;
+                     /* position: absolute;*/
                       top: 0;
                       right: 25px;
                       font-size: 36px;
@@ -111,9 +121,12 @@
                    <a href="crud/form_balada.php">Cadastrar baladas</a>
                  <?php endif ?>
                   <a href="mostrar.php">baladas da semana</a>
-                 <a href="crud/logout.php">Sair</a>
-               </div>
+                 <?php if (is_admin()): ?>
+                 <a href="listar-user.php">listar usuarios</a>
                <?php endif ?>
+                 <a href="crud/logout.php">Sair</a>
+               <?php endif ?>
+               </div>
 
                <script>
                  function openNav() {

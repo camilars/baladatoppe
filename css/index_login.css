@@ -32,6 +32,11 @@
                               /*padding: 0;*/
                               width:100%;
                         }
+                        #comentarios::-webkit-input-placeholder{
+                          color:#C4C;
+                          background-color: white;
+                          text-transform: uppercase;
+                          font-style: bold;
 
 
 
