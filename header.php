@@ -116,11 +116,11 @@ if (!isset($_SESSION['admin'])){
                 <div id="mySidenav" class="sidenav">
                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <!--  <a href="#" data-toggle="modal" data-target="#editModal" >Alterar conta</a> -->
+                 <a href="perfil.php">Perfil</a>
                  <?php if (balada()): ?>
                    <a href="carregar.php">Cadastrar folder</a> 
                    <a href="crud/form_balada.php">Cadastrar baladas</a>
                  <?php endif ?>
-                 <a href="perfil.php">Perfil</a>
                   <a href="mostrar.php">baladas da semana</a>
                  <?php if (is_admin()): ?>
                  <a href="listar-user.php">listar usuarios</a>
