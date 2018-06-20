@@ -84,7 +84,7 @@
 ?>
 </div>
 
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
 
 	
 												<div class="modal-dialog" role="document" >
@@ -114,7 +114,7 @@
 														</div>
 													</div>
 												</div>
-											</div> <!-- <Modal Login > -->
+											</div>  --><!-- <Modal Login > -->
 											<div id="comment-container"  style ="display: block; background-color: transparent; border:1px white; height: 250px; width: 550px;">
 												<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
 												<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
@@ -137,13 +137,15 @@
 													?>
 												</div>
 											</div>
+
 											<form method="POST" action="coment.php">
 												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="   height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: white; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
 												 <input type="hidden" id="custId" name="balada" value="$sql[1]">
-												<input class="btn btn-success" type="submit" name ="enviar" style="top:410px; position: absolute; left:1820px;">
+												<button  type="submit" class="btn btn-success green "  style="top:410px; position: absolute; left:1820px;"><i class="fa fa-share"></i> Share</button>
 												
 											</form>
-			 
+											 <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+	 
 											<script>
 												function initMap() {
 
@@ -181,6 +183,8 @@
 											</script>
 											<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 											async defer></script>
+
+		
 
 		</body>
 	</html>
