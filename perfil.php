@@ -45,11 +45,11 @@ Include"header.php";
                 
               </div>
             </div>
-            <!-- END SIDEBAR USER TITLE -->
-            <!-- SIDEBAR BUTTONS -->
+            
             <div class="profile-userbuttons">
+               
               <button type="button" class="btn btn-success btn-sm">Descrição</button>
-              <button type="button" class="btn btn-danger btn-sm">Message</button>
+              <button data-toggle="modal" data-target="#editModal" type="button" class="btn btn-danger btn-sm">Alterar conta</button>
 
             </div>
 
@@ -72,6 +72,37 @@ Include"header.php";
 
   </div>
 </div>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+
+  
+                        <div class="modal-dialog" role="document" >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="loginModalLabel">Editar conta</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form action="crud/update.php" method="POST">
+                                <div class="form-group">
+                                  <label for="name">Name:</label>
+                                  <input type="text" name="user" class="form-control" value="<?=$_SESSION['user-logged']?>">
+                                </div>
+                                <div class="form-group">
+                                  <label for="pass">Password:</label>
+                                  <input type="password" name="password" class="form-control" value="*****">
+                                </div>
+                                <div class="form-group">
+                                  <input type="hidden" name="balada" value="<?= $balada?>">
+                                  <input class="btn btn-danger" type="submit" name='delete' value="Excluir">  
+                                  <input class="btn btn-success" type="submit" name="salvar" value="Salvar">  
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
 <?php 
 include"rodape.php";
 ?>
