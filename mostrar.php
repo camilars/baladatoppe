@@ -19,7 +19,7 @@ include "header.php";
 <?php if(isset ($_SESSION['upload'])&& $_SESSION['upload']){
 ?>
 <?php 
-$pasta = "imagem/";
+$pasta = "imagens/";
 
 if (is_dir($pasta)){
 	$diretorio = dir($pasta);
@@ -41,7 +41,7 @@ if (is_dir($pasta)){
 
 <!-- <li style="margin-top: 4%;color:white;"> <?php 	echo $balada; ?> </li> -->
 <?php if (balada()): ?>
-<a href="carregar.php" style="margin-left: 40%; margin-top: -30px;" class="btn btn-primary">Cadastrar outra balada</a>
+<a href="carregar.php" style="margin-left: 40%; margin-top: 500px;" class="btn btn-primary">Cadastrar outra balada</a>
    <?php endif ?>
 
 </body>

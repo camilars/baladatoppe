@@ -5,6 +5,7 @@ include "../header.php";
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/perfil.css">
 	<title>Cadastrar balada</title>
 </head>
 <body>
@@ -15,7 +16,7 @@ include "../header.php";
 
   <h2 class="pagm">Cadastro da Balada</h2>
     <form class="form-horizontal" action="crud/cadastrar_balada.php" method="POST">
-      <div class="form-group" >
+      <div class="form-group" id="letras">
         <label class="control-label col-sm-1" for="balada">Balada:</label>
         <div class="col-sm-3">
           <input type="text" class="form-control"  placeholder="Nome da Balada" name="balada"required>
@@ -48,13 +49,13 @@ include "../header.php";
       <div class="form-group" >
         <label class="control-label col-sm-1" for="descricao">Descrição</label>
         <div class="col-sm-3">          
-          <input type="text" class="form-control"  placeholder="Descrição" name="descricao" required>>
+          <input type="text" class="form-control"  placeholder="Descrição" name="descricao" required>
         </div>
       </div>
-      <div class="form-group" >
+      <div class="form-group">
         <label class="control-label col-sm-1" for="horario">Horário</label>
         <div class="col-sm-2">          
-          <input type="time" class="form-control"  name="horario" required>>
+          <input type="time" class="form-control"  name="horario" required>
         </div>
         </div>
         <label class="control-label col-sm-4" </label>
