@@ -137,13 +137,43 @@
 													?>
 												</div>
 											</div>
+											<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-											<form method="POST" action="coment.php">
+   <div style=" position: absolute; left:1280px; top:400px; width: 900px;">
+   	
+                                      
+           <div class="col-md-8">
+           
+           
+           			<!-- <div class="container-fluid well span5"> -->
+	
+           
+           
+            <div class="panel panel-default">
+                <div class="panel-body">                
+                    <form   method="POST" action="coment.php">
+                        <textarea class="form-control counted" name="texto" placeholder="Comentários" rows="5" style="margin-bottom:10px;"></textarea>
+                       
+                        <button class="btn btn-info" type="submit">Comentar</button>
+                    </form>
+                </div>
+            </div>
+<!--         </div> -->
+	</div>	
+ </div>	
+ 
+   </div>
+
+
+										<!-- 	<form method="POST" action="coment.php">
 												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="   height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: white; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
 												 <input type="hidden" id="custId" name="balada" value="$sql[1]">
 												<button  type="submit" class="btn btn-success green "  style="top:410px; position: absolute; left:1820px;"><i class="fa fa-share"></i> Share</button>
 												
-											</form>
+											</form> -->
 											 <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 	 
 											<script>
