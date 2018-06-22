@@ -19,49 +19,44 @@
              <br>
 
 
-<div id="map"></div>
+             <div id="map"></div>
 
-             </head>
-             <body >
+           </head>
+           <body >
 
-             	<meta name="viewport" content="width=device-width, initial-scale=1">
-             </head>
-</nav>
+           	<meta name="viewport" content="width=device-width, initial-scale=1">
+           </head>
+         </nav>
 
-<div id="rolamento">
+         <div id="rolamento">
 
 
-	<label> <div class="w3-container w3-white">
-		<h2 style=" position: absolute;top: 50px; left: 1000px; color: white; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
+         	<label> <div class="w3-container w3-white">
+         		<h2 style=" position: absolute;top: 50px; left: 1000px; color: white; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
 
-		</div>
-		<!-- <div class="dropdown" style="position: absolute; left:1000px; top:120px;">
-			<a class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#">Visualizar <span class="caret"></span></a>
-			<ul class="dropdown-menu"> -->
-			<form  style="position: absolute; left:1000px; top:120px;action="index-login.php" method="POST" name="meuForm">
-			
-				<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
+         	</div>
+	
+				<form  style="position: absolute; left:1000px; top:120px;action="index-login.php" method="POST" name="meuForm">
 
-					<option value="default">Selecione</option>
-					<option value="balada" id = "balad">
-					<?php 
-						$sql='SELECT * FROM baladas';
-						$result = $conn->query($sql);
-						foreach ($result as $sql) {
-							echo "<option value = '$sql[1]' >" .$sql[1]. "</option>";
-						}
-						?>
-				</select>
+					<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
 
-			</form>
-			<!-- </ul>
-		</div>
+						<option value="default">Selecione</option>
+						<option value="balada" id = "balad">
+							<?php 
+							$sql='SELECT * FROM baladas';
+							$result = $conn->query($sql);
+							foreach ($result as $sql) {
+								echo "<option value = '$sql[1]' >" .$sql[1]. "</option>";
+							}
+							?>
+						</select>
 
-			 -->
-			</form>
+					</form>
+	
+</form>
 
 </label> 
-<!-- </div> -->
+
 <div style="background-color: white; width: 40%;height: 13%;">
 
 	<?php
@@ -70,112 +65,108 @@
 
 		$sql = "SELECT * FROM `baladas` WHERE `balada` ='" . $balada . "'";
 		$result = $conn->query($sql);
-	    foreach ($result as $row) {
-	        echo $row['balada'] . "<br>";
-	        echo $row['endereco'] . "<br>";
-	        echo $row['telefone'] . "<br>";
-	        echo "<a href='" . $row['link'] . "' target='_blank'>" . $row['link'] . "</a><br>";
-	        echo $row['descricao'] . "<br>";
-	        echo $row['horario'] . "<br>";
-	    }
+		foreach ($result as $row) {
+			echo $row['balada'] . "<br>";
+			echo $row['endereco'] . "<br>";
+			echo $row['telefone'] . "<br>";
+			echo "<a href='" . $row['link'] . "' target='_blank'>" . $row['link'] . "</a><br>";
+			echo $row['descricao'] . "<br>";
+			echo $row['horario'] . "<br>";
+		}
 		unset($_POST['balada']);
 
-}
-?>
+	}
+	?>
+</div>
+<div id="post">
+	
+
+													<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+													<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+													<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+													<div class="container" id="cont">
+														<div class="col-md-5">
+															<div class="panel panel-default">
+																<div class="panel-body">
+																	<section class="post-heading">
+																		<div class="row">
+																			<div class="col-md-11">
+																				<div class="media">
+																					<div class="media-left">                 
+																					</div>
+																					<div class="media-body">
+																						<h4 class="media-heading">comentarios da Balada</h4> 
+
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>             
+																		<?php 
+																		$consult = $conn->prepare('select * from comentarios');
+																		$consult->execute();
+																		$i = 0;
+																		$results=$consult->fetchAll();
+
+																		foreach ($results as $result) {
+																			$user = $result['usuarios_id'];
+																			$consulta = $conn->prepare("select usuario from usuarios where id = '$user'");
+																			$consulta->execute();
+																			$res = $consulta->fetch(PDO::FETCH_ASSOC);
+																			echo "<p style='color:black'><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
+																			$i++;
+																		}
+
+																		?>
+                  </div>
+             
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<!-- <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
 
-	
-												<div class="modal-dialog" role="document" >
-													<div class="modal-content">
-														<div class="modal-header">
-															<h5 class="modal-title" id="loginModalLabel">Editar conta</h5>
-															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																<span aria-hidden="true">&times;</span>
-															</button>
-														</div>
-														<div class="modal-body">
-															<form action="crud/update.php" method="POST">
-																<div class="form-group">
-																	<label for="name">Name:</label>
-																	<input type="text" name="user" class="form-control" value="<?=$_SESSION['user-logged']?>">
+</div>
+
+
+												<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+												<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+												<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+												<!------ Include the above in your HEAD tag ---------->
+
+												<div style=" position: absolute; left:1280px; top:400px; width: 900px;">
+
+
+													<div class="col-md-8">
+
+
+							
+
+
+															<div class="panel panel-default">
+																<div class="panel-body">                
+																	<form   method="POST" action="coment.php">
+																		<textarea class="form-control counted" name="texto" placeholder="Comentários" rows="5" style="margin-bottom:10px;"></textarea>
+
+																		<button class="btn btn-info" type="submit">Comentar</button>
+																	</form>
 																</div>
-																<div class="form-group">
-																	<label for="pass">Password:</label>
-																	<input type="password" name="password" class="form-control" value="*****">
-																</div>
-																<div class="form-group">
-																	<input type="hidden" name="balada" value="<?= $balada?>">
-																	<input class="btn btn-danger" type="submit" name='delete' value="Excluir">	
-																	<input class="btn btn-success" type="submit" name="salvar" value="Salvar">	
-																</div>
-															</form>
-														</div>
-													</div>
+															</div>
+															<!--         </div> -->
+														</div>	
+													</div>	
+
 												</div>
-											</div>  --><!-- <Modal Login > -->
-											<div id="comment-container"  style ="display: block; background-color: transparent; border:1px white; height: 250px; width: 550px;">
-												<h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
-												<div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;">	
 
-													<?php 
-													$consult = $conn->prepare('select * from comentarios');
-													$consult->execute();
-													$i = 0;
-													$results=$consult->fetchAll();
+											<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 
-													foreach ($results as $result) {
-														$user = $result['usuarios_id'];
-														$consulta = $conn->prepare("select usuario from usuarios where id = '$user'");
-														$consulta->execute();
-														$res = $consulta->fetch(PDO::FETCH_ASSOC);
-														echo "<p style='color:white'><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
-														$i++;
-													}
-
-													?>
-												</div>
-											</div>
-											<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-   <div style=" position: absolute; left:1280px; top:400px; width: 900px;">
-   	
-                                      
-           <div class="col-md-8">
-           
-           
-           			<!-- <div class="container-fluid well span5"> -->
-	
-           
-           
-            <div class="panel panel-default">
-                <div class="panel-body">                
-                    <form   method="POST" action="coment.php">
-                        <textarea class="form-control counted" name="texto" placeholder="Comentários" rows="5" style="margin-bottom:10px;"></textarea>
-                       
-                        <button class="btn btn-info" type="submit">Comentar</button>
-                    </form>
-                </div>
-            </div>
-<!--         </div> -->
-	</div>	
- </div>	
- 
-   </div>
-
-
-										<!-- 	<form method="POST" action="coment.php">
-												<input type="text"   name="texto"  placeholder="Comentários " maxlength="30" style="   height: 50px; position: absolute; left:1300px; top:400px; width: 500px; background-color: white; border:1px solid black;" required="e preciso adicinar comentarios para enviar.">
-												 <input type="hidden" id="custId" name="balada" value="$sql[1]">
-												<button  type="submit" class="btn btn-success green "  style="top:410px; position: absolute; left:1820px;"><i class="fa fa-share"></i> Share</button>
-												
-											</form> -->
-											 <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-	 
 											<script>
 												function initMap() {
 
@@ -214,9 +205,9 @@
 											<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGgwMp0kjMkByacOFITQOWz-7mH43dPnM&callback=initMap"
 											async defer></script>
 
-		
 
-		</body>
-	</html>
+
+										</body>
+										</html>
 
 
