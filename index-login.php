@@ -1,6 +1,7 @@
              <?php include_once 'init-login.php' ;
              include_once 'header.php';
              include 'rodape.php';
+
              ?>
              <!DOCTYPE html>
              <html lang="en">
@@ -8,9 +9,20 @@
              	<title>Balada Top </title>
 
              	<link rel="stylesheet" type="text/css" href="css/index_login.css">
+             	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+				<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+				<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+				<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+				<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+				<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+												
+                 <script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/kavendish/pen/aOdopx?q=comment&limit=all&type=type-pens" />
+				<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+				<meta name="viewport" content="width=device-width">
+				<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
 
              </head>
-             <body >
+       
 
              	<meta name="viewport" content="width=device-width, initial-scale=1">
              	<link rel="stylesheet" type="text/css" href="css/index_login.css">
@@ -21,26 +33,28 @@
 
              <div id="map"></div>
 
-           </head>
-           <body >
+      
+          
 
            	<meta name="viewport" content="width=device-width, initial-scale=1">
-           </head>
-         </nav>
+          
+      
 
          <div id="rolamento">
 
 
          	<label> <div class="w3-container w3-white">
+
+
          		<h2 style=" position: absolute;top: 50px; left: 1000px; color: white; text-shadow:1px 1px 0 #444 ">Baladas cadastradas:</h2>
 
          	</div>
 	
 				<form  style="position: absolute; left:1000px; top:120px;action="index-login.php" method="POST" name="meuForm">
 
-					<select name="balada" id="balad" class="form-control" onchange="this.form.submit();">
+					<select name="balada" id="balad" class="form-control" onchange="this.form.submit();" value="sql['balada']" >
 
-						<option value="default">Selecione</option>
+					
 						<option value="balada" id = "balad">
 							<?php 
 							$sql='SELECT * FROM baladas';
@@ -53,7 +67,6 @@
 
 					</form>
 	
-</form>
 
 </label> 
 
@@ -77,35 +90,32 @@
 
 	}
 	?>
-</div>
-<div id="post">
-	
-
-													<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-													<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-													<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
+             
+            </div>
+        
+        </div>
+      
 
-													<div class="container" id="cont">
-														<div class="col-md-5">
-															<div class="panel panel-default">
-																<div class="panel-body">
-																	<section class="post-heading">
-																		<div class="row">
-																			<div class="col-md-11">
-																				<div class="media">
-																					<div class="media-left">                 
-																					</div>
-																					<div class="media-body">
-																						<h4 class="media-heading">comentarios da Balada</h4> 
+										
 
-																					</div>
-																				</div>
-																			</div>
+<div class="cp-pen-styles">
 
-																		</div>             
-																		<?php 
+
+<div class="comments">
+		<div class="comment-wrap">
+				<div class="photo">
+						<!-- <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div> -->
+				</div>
+				
+		</div>
+
+		<div class="comment-wrap">
+				
+				<div class="comment-block">
+						<p class="comment-text">
+                   <p>		<?php 
 																		$consult = $conn->prepare('select * from comentarios');
 																		$consult->execute();
 																		$i = 0;
@@ -120,54 +130,29 @@
 																			$i++;
 																		}
 
-																		?>
-                  </div>
-             
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-</div>
-
-
-												<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-												<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-												<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-												<!------ Include the above in your HEAD tag ---------->
-
-												<div style=" position: absolute; left:1280px; top:400px; width: 900px;">
-
-
-													<div class="col-md-8">
-
-
-							
-
-
-															<div class="panel panel-default">
-																<div class="panel-body">                
+																		?></p>
+						
+				</div>
+		</div>
+		<div class="photo">
+						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+				</div>
+<div class="panel-body">                
 																	<form   method="POST" action="coment.php">
 																		<textarea class="form-control counted" name="texto" placeholder="Comentários" rows="5" style="margin-bottom:10px;"></textarea>
 
 																		<button class="btn btn-info" type="submit">Comentar</button>
 																	</form>
 																</div>
-															</div>
-															<!--         </div> -->
-														</div>	
-													</div>	
+		
 
-												</div>
+
+
+											
 
 											<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 
-											<script>
+										 <script>
 												function initMap() {
 
 													var recife = {lat: -8.1148764, lng: -34.8963423};

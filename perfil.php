@@ -23,17 +23,10 @@ Include"header.php";
           <div class="box-body">
            <div class="col-sm-6">
              <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
-
               <input id="profile-image-upload" class="hidden" type="file">
-              <div style="color:#999;" >upload</div>
+              <div style="color:#999;" >altera imagem </div>
+          <form action="proc_cad_img.php"></form>
               <!--Upload Image Js And Css-->
-
-              
-
-
-
-
-
             </div>
 
 
@@ -48,7 +41,7 @@ Include"header.php";
             
             <div class="profile-userbuttons">
              
-              <button type="button" class="btn btn-success btn-sm">Descrição</button>
+              <button data-toggle="modal" data-target="#editdescri" type="button" class="btn btn-success btn-sm" >Descrição</button>
               <button data-toggle="modal" data-target="#editModal" type="button" class="btn btn-danger btn-sm">Alterar conta</button>
 
             </div>
@@ -67,9 +60,11 @@ Include"header.php";
         $('#profile-image1').on('click', function() {
           $('#profile-image-upload').click();
         });
-      });       
+      });    
+
     </script> 
 
+    
   </div>
 </div>
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -91,12 +86,39 @@ Include"header.php";
           </div>
           <div class="form-group">
             <label for="pass">Password:</label>
-            <input type="password" name="password" class="form-control" value="<?=$_SESSION['user-logged']?>" placeholder="*******">
+            <input  id="sen"  type="password" name="password" class="form-control"   required="Pra sua segurança ">
           </div>
           <div class="form-group">
             <input type="hidden" name="balada" value="<?= $balada?>">
             <input class="btn btn-danger" type="submit" name='delete' value="Excluir">  
-            <input class="btn btn-success" type="submit" name="salvar" value="Salvar">  
+            <input id="pp" class="btn btn-success" type="submit" name="salvar" value="Salvar">  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editdescri" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+
+  
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">fale mais sobre você</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST">
+          <div class="form-group">
+            <label for="name">Descrição</label>
+            <input type="text" name="user" class="form-control">
+          </div>
+         
+          <div class="form-group">
+            <input type="hidden" name="balada" value="<?= $balada?>">
+            <input id="pp" class="btn btn-success" type="submit" name="salvar" value="Salvar">  
           </div>
         </form>
       </div>
@@ -105,6 +127,18 @@ Include"header.php";
 </div>
 </div>
 </div>
+<script>
+var sen = document.getElementById("sen");
+if (sen == null) {
+  alert("digita a nova senha");
+}
+var pp = document.getElementById("pp");
+pp.onclick = function(){
+  alert("você tem certeza ?");
+}
+
+  
+</script>
 
 </body>
 <?php 
