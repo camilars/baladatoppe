@@ -21,7 +21,7 @@ if ($SendCadImg) {
         $ultimo_id = $conn->lastInsertId();
 
         //Diretório onde o arquivo vai ser salvo
-        $diretorio = 'imagens/' . $ultimo_id.'/';
+        $diretorio = 'imagens/' ;
 
         //Criar a pasta de foto 
         mkdir($diretorio, 0755);
