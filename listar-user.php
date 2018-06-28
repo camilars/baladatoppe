@@ -40,6 +40,10 @@ include ('header.php');
 							</tr>
 						</thead>
 						<tbody>
+							<form action="adm-user.php" method="POST">
+								<input type="text" name="role">
+								<input type="submit" value="Altera">
+							</form>
 
 							<tr>
 								
