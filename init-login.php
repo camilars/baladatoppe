@@ -10,10 +10,11 @@ function login($user, $pw) {
 	$rows = $stmt->rowCount();
 	$result = $stmt->fetchAll();
 
-	echo 'rows: ' . $rows;
 	if ($rows > 0) {
 		$balada = $result['balada'];
 		$_SESSION['user-logged'] =  $user;
+		$_SESSION['user_id'] =  $result['id'];
+
 		if ($balada == "sim") {
 			$_SESSION['balada'] = true; 
 			return true;
@@ -26,6 +27,7 @@ function login($user, $pw) {
 function is_logged() {
 	return isset($_SESSION['user-logged']);
 }
+
 function balada() {
 	return isset($_SESSION['balada']);
 }

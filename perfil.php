@@ -25,6 +25,7 @@ Include"header.php";
              <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                <form method="POST" action="up-perfil.php" enctype="multipart/form-data" id="form"> 
               <input id="profile-image-upload" name="foto" class="hidden" type="file">
+              <input type="submit" value="enviar" class="btn btn-success">
               <div style="color:#999;" >altera imagem </div>
           </form>
               <!--Upload Image Js And Css-->

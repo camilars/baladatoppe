@@ -16,8 +16,10 @@ include ('header.php');
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		<!------ Include the above in your HEAD tag ---------->
-
+		<?php
+			$sql='SELECT * FROM usuarios';
+			$result = $conn->query($sql);
+		?>
 		<div class="container">
 			<div class="row">
 				<h2>Gerenciar usuários</h2>
@@ -36,48 +38,18 @@ include ('header.php');
 								<th>Nome</th>
 								<th>promoter</th>
 								<th>Papel</th>
-								<!-- <th>Ações</th>	 -->                
+								<th>Ações</th>	                
 							</tr>
 						</thead>
-						<tbody>
-							<form action="adm-user.php" method="POST">
-								<input type="text" name="role">
-								<input type="submit" value="Altera">
-							</form>
-
-							<tr>
-								
-								<td><?php
-
-								$sql='SELECT * FROM usuarios';
-								$result = $conn->query($sql);
-								foreach ($result as $sql) {
-									echo "<option value = '$sql[1]' >" .$sql[1]. "</option>";
-								}
-
-								?></td>
-								<td><?php
-
-								$sql='SELECT * FROM usuarios';
-								$result = $conn->query($sql);
-								foreach ($result as $sql) {
-									echo "<option value = '$sql[3]' >" .$sql[3]. "</option>";
-								}
-
-								?></td>
-								<td>
-									<?php
-
-								$sql='SELECT * FROM usuarios';
-								$result = $conn->query($sql);
-								foreach ($result as $sql) {
-									echo "<option value = '$sql[4]' >" .$sql[4]. "</option>";
-								}
-
-								?>
-								</td>
-								
-							</tr> 
+						<tbody>							
+								<?php while($res = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+								<tr>
+									<td><?= $res['usuario'] ?></td>
+									<td><?= $res['balada'] ?></td>
+									<td><?= $res['role'] ?></td>
+									<td><a href="adm-user.php?id=<?= $res['id'] ?>" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+								</tr> 
+								<?php } ?>
 
 						</tbody>
 					</table>

@@ -1,7 +1,4 @@
-
-<link rel="stylesheet" type="text/css" href="rodape.css">
-
-<footer class="footer page-footer font-small stylish-color-dark pt-4 mt-4">
+<footer class="footer stylish-color-dark">
     <div class="container-fluid text-center text-md-left">
         <div class="row">
           <div class="col-md-4">
@@ -36,8 +33,8 @@
     </div>
     <div class="footer-copyright py-3 text-center">
       © 2018 Copyright:
-      <a target="_blank" href="http://www.ifpe.edu.br/campus/igarassu">IFPE-Igarassu<a>
-    </div>
+      <a target="_blank" href="http://www.ifpe.edu.br/campus/igarassu">IFPE-Igarassu</a>
+    </div> 
 </footer>
 </body>
-</html> 
+</html>

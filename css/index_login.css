@@ -6,6 +6,19 @@
 
 
 /*-- Content Style --*/
+.container{
+
+}
+div#div{
+height: 50%;
+width: 40%;
+margin-top:100px ;
+margin-left: 100px;
+border-radius: 20px 20px;   
+    
+            
+
+}
 .post-footer-option li{
     float:left;
     margin-right:50px;
@@ -175,13 +188,13 @@ div#post{
     }
                         
                     
-#map {
+/*#map {
                               height: 50%;
                               width: 40%;
                               margin-top:30px ;
                               border-radius: 20px 20px;
 
-                        }
+                        }*/
                         embed {
                               margin: 0;
                               padding: 0;

@@ -18,16 +18,7 @@ include "header.php";
 	}
 	?>
 	<div class="container" id="corpo">
-	<!-- 
-	<form method="POST" enctype="multipart/form-data" action="add_balada.php" id="formulario">
-	 <h1 style="color: white;">selecione imagem:</h1>
-	 <div class="col-md-6">
-	<input type="file" class="form-control" name="arquivo" required><br/>
-	 </div>
-	 <div class="col-md-12"><br>
-	<input type="submit" class="btn btn-primary">	
-	 </div>
-	</form> -->
+	
 	<form method="POST" action="proc_cad_img.php" enctype="multipart/form-data" id="formulario">
 		<label>Nome:</label>
 		<div class="col-md-3">

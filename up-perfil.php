@@ -1,21 +1,21 @@
 <?php
      include_once 'conexao.php';
-
-     $foto = $_FILES['foto'];
-
-     move_uploaded_file ( string $foto , string $novoDestino );
-
-     $sql = "INSERT INTO foto (foto) values ( $novoDestino");
-
-/******
+include_once "init-login.php";
+/******.
  * Upload de imagens
  ******/
- 
+echo "teste";
+if (isset($_SESSION['user_id'])) {
+	$user_id=$_SESSION['user_id'];
+	$sql="SELECT id FROM usuarios WHERE id ='$user_id'";
+	$result=$conn->query($sql);
+	echo $user_id;
+}
+
 // verifica se foi enviado um arquivo
-if ( isset( $_FILES[ 'arquivo' ][ 'foto' ] ) && $_FILES[ 'arquivo' ][ 'error' ] == 0 ) {
-    
-    $arquivo_tmp = $_FILES[ 'arquivo' ][ 'tmp_foto' ];
-    $nome = $_FILES[ 'arquivo' ][ 'foto' ];
+if (isset( $_FILES['foto']['name']) && $_FILES['foto']['error'] == 0) {
+
+    $nome = $_FILES['foto']['name'];
  
     // Pega a extensão
     $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
@@ -36,9 +36,10 @@ if ( isset( $_FILES[ 'arquivo' ][ 'foto' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
         $destino = 'imagens / ' . $novoNome;
  
         // tenta mover o arquivo para o destino
-        if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
+        if (move_uploaded_file ( $arquivo_tmp, $destino ) ) {
             echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
             echo ' < img src = "' . $destino . '" />';
+			$sql = "INSERT INTO foto (imagem, usuarios_id) values ( '$novoNome','$user_id')";
         }
         else
             echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';

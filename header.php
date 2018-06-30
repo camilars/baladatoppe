@@ -21,6 +21,7 @@ if (!isset($_SESSION['admin'])){
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="rodape.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
@@ -42,15 +43,15 @@ if (!isset($_SESSION['admin'])){
           <li><a href="index.php"><i class="fas fa-home"></i> HOME</a></li>
 
 
-          <li class="dropdown">
+          <!-- <li class="dropdown">
 
 
             <ul class="dropdown-menu">
 
             </ul>
-          </li>
+          </li> -->
           <!--  tag li para ir no mapa -->
-          <li><a href="mapa.php">MAPA<i class="fas fa-map-marker-alt"></i></span></a></li>
+          
           
 
           <li><a href="crud/form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
@@ -140,7 +141,7 @@ if (!isset($_SESSION['admin'])){
                 }
               </script>
 
-          <li></li>
+         
         </ul>
       </div>
     </div>
