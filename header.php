@@ -22,6 +22,7 @@ if (!isset($_SESSION['admin'])){
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" type="text/css">
   <link rel="stylesheet" type="text/css" href="rodape.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
@@ -57,7 +58,26 @@ if (!isset($_SESSION['admin'])){
           <li><a href="crud/form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
        
           <?php if (is_logged()): ?>
-            <li><a href="index-login.php"><?= strtoupper($_SESSION['user-logged'])?></a></li>
+                <li class="dropdown">
+        <a href="javascript:void(0)" aria-hidden="true" class="dropbtn"><?= strtoupper($_SESSION['user-logged'])?></a>
+        <div class="dropdown-content" style="margin-left: 12px;">
+        <a href="index-login.php">Home page</a>
+          
+             <?php if (balada()): ?>
+                    <a href="perfil.php">Perfil</a>
+                   <a href="carregar.php">Cadastrar folder</a> 
+                   <a href="crud/form_balada.php">Cadastrar baladas</a>
+                 <?php endif ?>
+                  <?php if (is_admin()): ?>
+                 <a href="listar-user.php">listar usuarios</a>
+                 <?php endif ?>
+                  <a href="crud/logout.php">Sair</a>
+
+          
+        </div>
+        </li>
+      
+
             <li><a href="crud/logout.php">LOGOUT <i class="fas fa-sign-out-alt"></i></a></li>
           <?php else: ?>
             <li><a href="crud/login.php">LOGIN <i class="fas fa-user"></i></a></li>
@@ -112,34 +132,7 @@ if (!isset($_SESSION['admin'])){
                 <!-- <link rel="stylesheet" type="text/css" href="cssteste.css"> -->
 
 
-                <?php if (is_logged()): ?>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-                <div id="mySidenav" class="sidenav">
-                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <!--  <a href="#" data-toggle="modal" data-target="#editModal" >Alterar conta</a> -->
-                 <a href="perfil.php">Perfil</a>
-                 <?php if (balada()): ?>
-                   <a href="carregar.php">Cadastrar folder</a> 
-                   <a href="crud/form_balada.php">Cadastrar baladas</a>
-                 <?php endif ?>
-                  <a href="mostrar.php">baladas da semana</a>
-                 <?php if (is_admin()): ?>
-                 <a href="listar-user.php">listar usuarios</a>
-               <?php endif ?>
-                 <a href="crud/logout.php">Sair</a>
-               <?php endif ?>
-               </div>
-
-               <script>
-                 function openNav() {
-                  document.getElementById("mySidenav").style.width = "250px";
-                }
-
-                function closeNav() {
-                  document.getElementById("mySidenav").style.width = "0";
-                }
-              </script>
+               :
 
          
         </ul>
