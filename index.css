@@ -10,25 +10,22 @@ embed {
   padding: 0;
   height: 50px;
 }
-.header{
-  font-size: 40px;
-  padding: 2px 2px;
-  text-align: center;
-  background-color: grey;
-  color:#000000;
 
-}
-html, body {
+
+
+html {
   height: 100%;
   /*margin: 0;*/
   /*padding: 0;*/
   width:100%;
+    position: relative;
 }
-
 body{
-/*  background:url('css/abalada.jpg') no-repeat;
-  background-size: cover;
-  background-attachment: fixed;*/
+  
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #777;
+  font-size: 180%;
+font-family: serif;
 }
 
 
@@ -44,15 +41,10 @@ body{
   left:1300px;
   top:160px;
 }
-body {
-  font: 400 15px/1.8 Lato, sans-serif;
-  color: #777;
-}
+
 h3, h4 {
-  margin: 10px 0 30px 0;
-  letter-spacing: 10px;      
-  font-size: 20px;
-  color: #111;
+  color: blue;
+
 }
 .container {
   padding: 80px 120px;
@@ -116,7 +108,7 @@ h3, h4 {
   background-color: #fff;
   color: #000;
 }
-.modal-header, h4, .close {
+/*.modal-header, h4, .close {
   background-color: #333;
   color: #fff !important;
   text-align: center;
@@ -124,7 +116,7 @@ h3, h4 {
 }
 .modal-header, .modal-body {
   padding: 40px 50px;
-}
+}*/
 .nav-tabs li a {
   color: #777;
 }
@@ -144,7 +136,9 @@ h3, h4 {
   opacity: 0.9;
 }
 navbar li a, .navbar .navbar-brand { 
-  color: #000000 !important;
+  color: grey !important;
+  font-size: 30px;
+  font-family: serif;
 }
 .navbar-nav li a:hover {
   color: #4d4dff !important;
@@ -159,17 +153,14 @@ navbar li a, .navbar .navbar-brand {
 .open .dropdown-toggle {
   color: #fff;
   background-color: #555 !important;
-}
-.dropdown-menu li a {
-  color: #000 !important;
-}
-.dropdown-menu li a:hover {
-  background-color: red !important;
+
 }
 footer {
   background-color: #2d2d30;
   color: #f5f5f5;
   padding: 32px;
+  position: absolute; 
+  bottom: 0;
 }
 footer a {
   color: #f5f5f5;
@@ -181,67 +172,18 @@ footer a:hover {
 .form-control {
   border-radius: 0;
 }
-textarea {
-  resize: none;
-}
+
 p{
   font-style: italic;
   text-align: center;
 
 }
-body {
-                  font-family: "Lato", sans-serif;
-                }
 
-                .sidenav {
-                  height: 100%;
-                  width: 0;
-                  position: fixed;
-                  z-index: 1;
-                  top: 0;
-                  right: 0;
-                  background-color: #111;
-                  overflow-x: hidden;
-                  transition: 0.5s;
-                  padding-top: 60px;
-                }
-
-                .sidenav a {
-                  padding: 8px 8px 8px 32px;
-                  text-decoration: none;
-                  font-size: 25px;
-                  color: #818181;
-                  display: block;
-                  transition: 0.3s;
-                }
-
-                .sidenav a:hover {
-                  color: #f1f1f1;
-                }
-
-                .sidenav .closebtn {
-                  position: absolute;
-                  top: 0;
-                  right: 25px;
-                  font-size: 36px;
-                  margin-left: 50px;
-                }
-
-                @media screen and (max-height: 450px) {
-                  .sidenav {padding-top: 15px;}
-                  .sidenav a {font-size: 18px;}
-                }
-                li{
-    color: black;
-  }
-
-  /*comentarios*/
 
   #comentarios::-webkit-input-placeholder{
                           color:#C4C;
                           background-color: #4C4;
-                          text-transform: uppercase;
-                          font-style: bold;
+
                         </style>
 
 
