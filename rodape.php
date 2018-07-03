@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-md-4">
             <h5 class="text-uppercase">Balada Top</h5>
-            <p> O Balada Top é uma aplicação com o objetivo de ajudar os usuários a encontrar as melhores baladas da região metropolitana do Recife.<br>
+            <p> O Balada Top é uma aplicação com o objetivo de ajudar os usuários <br> a encontrar as melhores baladas da região metropolitana do Recife.<br>
              <a href="form_cadastro.php">Cadastre-se,</a> receba notificações especiais e promoções</p>
           </div>
           
@@ -11,7 +11,7 @@
             <h5 class="text-uppercase">Empresa desenvolvedora</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="../access-premiun/index.php">www.accesspremiun.com</a>
+               <p>Gmail: baladatop15@gmail.com</p>
               </li>
              </ul>  
           </div>

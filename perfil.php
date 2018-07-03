@@ -8,14 +8,14 @@ Include"header.php";
 <!-- Include the above in your HEAD tag -->
 
 <div class="container">
-	<div class="row">
-		<h2>Perfil do Usuário <?= ($_SESSION['user-logged'])?></h2>
+  <div class="row">
+    <h2>Perfil do Usuário <?= ($_SESSION['user-logged'])?></h2>
 
 
    <div class="col-md-7 ">
 
     <div class="panel panel-default">
-      <div class="panel-heading">  <h4 >usuário</h4></div>
+     
       <div class="panel-body">
 
         <div class="box box-info">
@@ -25,7 +25,7 @@ Include"header.php";
              <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                <form method="POST" action="up-perfil.php" enctype="multipart/form-data" id="form"> 
               <input id="profile-image-upload" name="foto" class="hidden" type="file">
-              <input type="submit" value="enviar" class="btn btn-success">
+              
               <div style="color:#999;" >altera imagem </div>
           </form>
               <!--Upload Image Js And Css-->
@@ -43,8 +43,8 @@ Include"header.php";
             
             <div class="profile-userbuttons">
              
-              <button data-toggle="modal" data-target="#editdescri" type="button" class="btn btn-success btn-sm" >Descrição</button>
-              <button data-toggle="modal" data-target="#editModal" type="button" class="btn btn-danger btn-sm">Alterar conta</button>
+              <button data-toggle="modal" data-target="#editdescri" type="button" class="btn btn-primary btn-sm" >Descrição</button>
+              <button data-toggle="modal" data-target="#editModal" type="button" class="btn btn-primary btn-sm">Alterar conta</button>
 
             </div>
 
