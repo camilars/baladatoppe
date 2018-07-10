@@ -96,17 +96,18 @@ p {
 
 .comments {
   margin: 25px auto 0;
-  margin-right:100px;
-  max-width: 800px;
-  padding:100px;
-    overflow:auto;
+  /*margin-right:100px;*/
+  /*max-width: 800px;*/
+  /*padding:100px;*/
+  /*overflow:auto;*/
 }
 
 .comment-wrap {
   margin-bottom: 1.25rem;
-  display: table;
+  display: block;
   width: 100%;
   min-height: 5.3125rem;
+
 }
 
 .photo {
@@ -120,13 +121,16 @@ p {
   border-radius: 50%;
   background-size: contain;
 }
-
 .comment-block {
   padding: 1rem;
   background-color: #fff;
   display: table-cell;
   vertical-align: top;
   border-radius: 0.1875rem;
+  min-height: 120px;
+  max-height: 10px;
+  display: block;
+  overflow: scroll;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
 .comment-block textarea {
@@ -209,7 +213,7 @@ div#post{
 
                         }
                         html, body {
-                              height: 100%;
+                              /*height: 100%;*/
                               /*margin: 0;*/
                               /*padding: 0;*/
                               width:100%;

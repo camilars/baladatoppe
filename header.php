@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin'])){
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="rodape.css">
+  <!-- <link rel="stylesheet" type="text/css" href="rodape.css"> -->
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -42,6 +42,9 @@ if (!isset($_SESSION['admin'])){
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.php"><i class="fas fa-home"></i> HOME</a></li>
+          <?php if (!is_logged()): ?>
+           <li><a href="quemsomos.php"><i class="fas fa-users"></i> QUE SOMOS</a></li>
+           <?php endif ?>
 
 
           <!-- <li class="dropdown">
@@ -53,13 +56,13 @@ if (!isset($_SESSION['admin'])){
           </li> -->
           <!--  tag li para ir no mapa -->
           
-          
+           <?php if (!is_logged()): ?>
 
           <li><a href="crud/form_cadastro.php">CADASTRE-SE<i class= "fas fa-user-circle"></i></a></li>
-       
+       <?php endif ?>
           <?php if (is_logged()): ?>
                 <li class="dropdown">
-        <a href="javascript:void(0)" aria-hidden="true" class="dropbtn"><?= strtoupper($_SESSION['user-logged'])?></a>
+        <a href="javascript:void(0)" aria-hidden="true"  class="dropbtn"><?= strtoupper($_SESSION['user-logged'])?></a>
         <div class="dropdown-content" style="margin-left: 12px;">
         <a href="index-login.php">Home page</a>
           
@@ -71,7 +74,7 @@ if (!isset($_SESSION['admin'])){
                   <?php if (is_admin()): ?>
                  <a href="listar-user.php">listar usuarios</a>
                  <?php endif ?>
-                  <a href="crud/logout.php">Sair</a>
+                  
 
           
         </div>

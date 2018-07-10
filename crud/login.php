@@ -6,6 +6,11 @@ include "../header.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style>
+		p{
+			color: white;
+		}
+	</style>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/login.css">
@@ -19,7 +24,7 @@ include "../header.php";
 			<input type="submit" value="Enviar">
 		<!-- /form -->
 
-                Ainda não é cadastrado?<br>
+                <p>Ainda não é cadastrado?<br>
                 <a href="crud/form_cadastro.php" class="forgot-password"> Cadastre-se! </a>
         </div><!-- /card-container -->
     </div><!-- /container -->

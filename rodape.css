@@ -7,20 +7,18 @@ article {
     margin: 0 auto;
 }
 html {
-  position: relative;
-  min-height: 100%;
+  position: relative!important;
+  min-height: 100%!important;
+  padding-bottom: 180px!important;
 }
-body {
-  /* Margin bottom by footer height */
-  /*margin-bottom: 60px;*/
-}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%; 
-  height: 180px;
-   font-size: 120%;
-font-family: serif;
+  position: absolute!important;
+  bottom: 0!important;
+  width: 100%!important; 
+  height: 180px!important;
+  font-size: 120%!important;
+  font-family: serif!important;
 
   /* Set the fixed height of the footer here */
   /*height: 60px;*/

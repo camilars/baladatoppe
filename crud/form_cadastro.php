@@ -1,6 +1,7 @@
 <?php include '../header.php';?>
 <form  action="crud/add_usuario.php" id="form_cadastro" method="POST">
     <link rel="stylesheet" type="text/css" href="css/form_cadastro.css">
+    <div class="container">
     <div class="container text-center"><!-- formlário cadastro -->
         <div class="form-row">
             <div class="col-md-6">
@@ -31,15 +32,16 @@
                     </select>
                         
                     </div>
+            <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Enviar</button>
                 </div>
 
             </div>
         </div>
     </div>
-    <div class="col-md-7" align="center">
-        <div class="col-md-1">
-            <button style=" position: absolute;  top:6px; left:580px;" type="submit" class="btn btn-primary">Enviar</button>
+
+        
         </div>
+   
     </div>
 </form>
 <script>

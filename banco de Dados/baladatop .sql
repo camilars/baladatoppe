@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Jun-2018 às 13:23
+-- Generation Time: 10-Jul-2018 às 21:26
 -- Versão do servidor: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -67,7 +67,9 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`id`, `texto`, `usuarios_id`, `balada_id`) VALUES
-(6, 'Legal!', 19, 1);
+(6, 'Legal!', 19, 1),
+(7, 'teste', 26, 1),
+(8, 'teste 3', 26, 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +182,7 @@ ALTER TABLE `baladas`
 -- AUTO_INCREMENT for table `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `foto`
 --

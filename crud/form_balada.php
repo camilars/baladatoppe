@@ -57,9 +57,9 @@ include "../header.php";
         <div class="col-sm-2">          
           <input type="time" class="form-control"  name="horario" required>
         </div>
+		<input class="btn btn-primary" type="submit" name="salvar" value="Salvar">	
         </div>
         <label class="control-label col-sm-4" </label>
-		<input class="btn btn-success" type="submit" name="salvar" value="Salvar">	
 					
       </div>
 
